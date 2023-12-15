@@ -1,0 +1,908 @@
+<html>
+	<head>
+		<title>STC - Map</title>
+		
+    <meta property="og:title"           content="Save The Crew - Ally Map" />
+    <meta property="og:description"     content="Our Business allies Map. Find and support an ally today!" />
+		<meta property="og:url"             content="https://savethecrew.com/" />
+		<meta property="og:image"           content="https://savethecrew.com/images/fb_cover.png" />
+		<meta property="og:image:width"			content="1000px" />
+    <meta property="og:image:height"		content="505px" />
+    <meta name="twitter:title" 					content="Save The Crew - Ally Map">
+    <meta name="twitter:description" 		content="Our Business allies Map. Find and support an ally today!" />
+		<meta name="twitter:card" 					content="summary">
+    <meta name="twitter:image" 					content="https://savethecrew.com/images/twitter_url.png" />
+		
+    <link rel="stylesheet" href="css/white_v1.4.1.css" />
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/> 
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="images/favicons/manifest.json">
+    <link rel="mask-icon" href="images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="images/favicons/favicon.ico">
+    <meta name="msapplication-config" content="/images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700|PT+Sans" rel="stylesheet">
+		
+	</head>
+	<body>
+		
+		 
+		
+		<script> var headerChange;
+    $(document).on('click','.toggleMenu',function(){
+			$('nav').animate({width:'toggle'},'fast');
+		}).ready(function(){
+
+			window.onscroll = function(){headerChange()}; var scrolled=false;
+
+			headerChange = function (){
+				if(document.body.scrollTop > $('header').height() && $(window).width()>900 && !scrolled){
+					scrolled=true;
+					$('.nHeader').animate({'height':60},'fast');
+					$('.top').animate({'height':60},'fast');
+					$('.logo-primary').animate({'height':40,'margin':10},'fast');
+					$('.logo-words').animate({'height':20,'margin':20},'fast');
+					$('.hamburger').animate({'height':20,'padding':20},'fast');
+				}else if(document.body.scrollTop < $('header').height() && $(window).width()>900 && scrolled){
+					scrolled=false;
+					$('.nHeader').animate({'height':100},'fast');
+					$('.top').animate({'height':100},'fast');
+					$('.logo-primary').animate({'height':80,'margin':10},'fast');
+					$('.logo-words').animate({'height':40,'margin':30},'fast');
+					$('.hamburger').animate({'height':36,'padding-top':32,'padding-right':20,'padding-bottom':32,'padding-left':20},'fast');
+				}
+			}
+		});</script>
+		
+		<nav class='sider box-shadow-left'>
+			<a class='toggleMenu'>X</a>
+			<a href='index.html'>Home</a>
+			<a href='stadium.html'>Stadium</a>
+			<a href='groups.html'>Supporter Groups</a>
+			<a href='kit.html'>Kit</a>
+			<a href='allies.html'>Allies</a>
+			<a href='map.html'>Ally Map</a>
+			
+			<a href='organizers.html'>Organizers</a>
+		</nav>
+		
+		<header class='nHeader fc box-shadow-down'>
+			<div class='container-wide'>
+				<div class='top fsb'>
+					<a href='index.html' class='desk'><img src='images/logos_tm/stc_primary_logo_tm.png' class='logo-primary'></a>
+					<a href='index.html'><img src='images/logos_tm/stc_words_tm.png' class='logo-words'></a>
+					<a><img src='images/ui/hamburger.png' class='hamburger toggleMenu'></a>
+				</div>
+			</div>
+		</header>
+		
+		<div class='header-filler'></div>
+		
+		<div class='area fc'>
+			
+			<div class='container'>
+				<div class='area-title goth'>Business Allies Map</div>
+				<div class='area-subtitle euro'>
+					Find one of our business allies near you and support them today
+				</div>
+				<!--<div class='black-button-area fc euro'>
+					<a class='black-button' href='http://bit.ly/STCBizForm' target="_blank">Become an ally</a>
+				</div>-->
+			</div>
+			
+			<div class='container-wide'>
+				<style>
+					div#map{
+						width: 90%;
+						height: 500px;
+						background-color: white;
+						float: left;
+						margin: 30px 0 15px 5%;
+					}
+					@media screen and (min-width:0px) and (max-width:800px){
+						div#map{
+							height: 500px;
+						}
+					}
+					@media screen and (min-width:1200px) {
+						div#map{
+							height: 700px;
+						}
+					}
+					.iw>p{
+						color: black;
+						margin:3px;
+						padding: 0;
+					}
+				</style>
+
+				<script>
+
+					var latlongs = [
+					{'name': 'Honest Advertising','y':40.099115,'x':-83.114815,'addr':'365 W Bridge St Dublin OH 43017','url':'','twitter':''},
+					{'name':'Fourth Street Bar & Grill','y':39.980631,'x':-82.998367,'addr':'863 N Fourth St Columbus OH 43215','url':'https://www.4thstreetbar.com/','twitter':'fourthstreetbar'},
+{'name':'614 Media Group','y':39.95757619,'x':-82.98698098,'addr':'458 E Main St Columbus OH 43215','url':'http://614now.com/','twitter':''},
+{'name':'ANDES','y':39.96080202,'x':-82.9958798,'addr':'79 S 4th St Columbus OH 43215','url':'https://www.facebook.com/ANDESBARANDGRILL/','twitter':'andes_columbus'},
+{'name':'Acre','y':39.993609463,'x':-83.04211391,'addr':'1717 Northwest Blvd Columbus OH 43212','url':'https://www.acretogo.com/','twitter':'acrefoods'},
+{'name':'Acre','y':40.017824,'x':-83.012241,'addr':'2700 N High St Columbus OH 43202','url':'https://www.acretogo.com/','twitter':''},
+{'name':'Actual Brewing Co','y':39.985791399,'x':-82.90748192,'addr':'655 N James Rd Columbus OH 43219','url':'https://www.actualbrewing.com/','twitter':'ActualBrewing'},
+{'name':'Ahlum & Arbor Tree Preservation','y':39.986119259,'x':-83.1372564,'addr':'1740 Walcutt Rd Columbus OH 43228','url':'http://www.ahlumarbor.com','twitter':'TreePreserving'},
+{'name':'Aladdin s Eatery','y':39.986760063,'x':-83.04462032,'addr':'1425 Grandview Ave Columbus OH 43212','url':'https://www.aladdinseatery.com/','twitter':'AladdinsEatery'},
+{'name':'Aladdin s Eatery','y':40.107726,'x':-83.016892,'addr':'7227 N High St Worthington OH 43085','url':'https://www.aladdinseatery.com/','twitter':''},
+{'name':'Aladdin s Eatery','y':40.021999875,'x':-83.0133385,'addr':'2931 N High St Columbus OH 43202','url':'https://www.aladdinseatery.com/','twitter':''},
+{'name':'Ale Wine & Spirits of Powell','y':40.192661,'x':-83.09521,'addr':'Guard-Well St Powell OH 43065','url':'http://alewineandspirits.com/','twitter':'awspowell'},
+{'name':'Alison Rose Screen Printing','y':39.966606534,'x':-82.9929712,'addr':'162 N 6th St Columbus OH 43215','url':'https://alisonrose.com','twitter':'alisonrosetees'},
+{'name':'Ambiguous You','y':40.158112,'x':-83.077916,'addr':'94 W Olentangy St Powell OH 43065','url':'http://www.ambiguousyou.com/','twitter':'Ambiguous_You'},
+{'name':'Aquatic Adventures Ohio','y':40.034224501,'x':-83.12888763,'addr':'3940 Lyman Dr Hilliard OH 43026','url':'https://www.aaoscuba.com/','twitter':'AAOSCUBA'},
+{'name':'Arepazo','y':39.963525167,'x':-82.99997156,'addr':'47 N Pearl St Columbus OH 43215','url':'http://www.elarepazolatingrill.com','twitter':''},
+{'name':'Arepazo','y':39.951600143,'x':-82.99858714,'addr':'515 S High St Columbus OH 43215','url':'http://www.elarepazolatingrill.com','twitter':''},
+{'name':'Arepazo','y':40.020066571,'x':-82.87821329,'addr':'93 N High St Gahanna OH 43230','url':'http://www.elarepazolatingrill.com','twitter':'ArepazoGrill'},
+{'name':'Atlas Butler Heating and Cooling','y':40.0640169,'x':-82.99437163,'addr':'4849 Evanswood Dr Columbus OH 43229','url':'http://atlasbutler.com/','twitter':'AtlasButler'},
+{'name':'Average Joe s Pub & Grill','y':39.980603,'x':-83.144376,'addr':'1515 Rome Hilliard Rd OH 43228','url':'http://www.averagejoespub.com','twitter':'averagejoespub'},
+{'name':'Average Joe s Pub & Grill','y':40.156528,'x':-83.093751,'addr':'9900 Brewster Ln Powell OH 43065','url':'http://www.averagejoespub.com','twitter':''},
+{'name':'Average Joe s Pub & Grill','y':40.053011886,'x':-83.04797578,'addr':'1126 W Henderson Rd Columbus OH 43220','url':'http://www.averagejoespub.com','twitter':''},
+{'name':'Average Joe s Pub & Grill','y':40.142317639,'x':-82.98995361,'addr':'8453 Sancus Blvd Columbus OH 43240','url':'http://www.averagejoespub.com','twitter':''},
+{'name':'Average Joe s Pub & Grill','y':40.07885,'x':-82.862049,'addr':'4949 E Dublin Granville Rd Columbus OH 43081','url':'http://www.averagejoespub.com','twitter':''},
+{'name':'Avola Lanza Hair Studio','y':39.986477,'x':-83.045027,'addr':'1417 Grandview Ave # B OH 43212','url':'http://avolalanza.com/','twitter':'avolalanzahair'},
+{'name':'B-Wear Sportswear','y':40.093501,'x':-82.426759,'addr':'1680 N 21st St Newark OH 43055','url':'http://www.bwearsportswear.com','twitter':''},
+{'name':'B-Wear Sportswear','y':39.95190153,'x':-81.88142355,'addr':'1000 5 Bs Dr Zanesville OH 43701','url':'http://www.bwearsportswear.com','twitter':'BWearSportswear'},
+{'name':'BBCO Design','y':39.996276,'x':-83.073631,'addr':'2029 RIVERSIDE DRIVE STE 202 OH 43221','url':'BBCODESIGN.COM','twitter':'bbcodesign'},
+{'name':'BLC Images','y':39.957236,'x':-83.008079,'addr':'300 W Walnut St Columbus OH 43215','url':'http://www.blcimages.com','twitter':'BLC_photography'},
+{'name':'Bake Me Happy','y':39.935085048,'x':-82.99295738,'addr':'106 E Moler St Columbus OH 43207','url':'http://www.bakemehappygf.com','twitter':'bakemehappygf'},
+{'name':'Balboa','y':39.9843201,'x':-83.04481388,'addr':'1312 Grandview Ave Grandview Heights OH 43212','url':'http://www.balboagrandview.com/','twitter':'balboacolumbus'},
+{'name':'Barrel On High','y':39.985252,'x':-83.005146,'addr':'1120 N High St Columbus OH 43201','url':'http://www.barrelonhigh.com','twitter':''},
+{'name':'Benefactor Group','y':39.952513182,'x':-83.00056564,'addr':'450 S Front St Columbus OH 43215','url':'https://benefactorgroup.com/','twitter':'BenefactorGroup'},
+{'name':'Big Mamma s Burritos','y':39.985466581,'x':-83.04472313,'addr':'1359 Grandview Ave Columbus OH 43212','url':'http://bigmammasburritos.com/','twitter':''},
+{'name':'Big Mamma s Burritos','y':40.010718333,'x':-83.01035187,'addr':'2375 N High St Columbus OH 43202','url':'http://bigmammasburritos.com/','twitter':''},
+{'name':'Big Mamma s Burritos','y':39.947843895,'x':-82.99785489,'addr':'702 S High St Columbus OH 43206','url':'http://bigmammasburritos.com/','twitter':''},
+{'name':'Big Mamma s Burritos','y':39.328715571,'x':-82.10121257,'addr':'10 S Court St Athens OH 45701','url':'http://bigmammasburritos.com/','twitter':'bigmammascbus'},
+{'name':'Blockfort Columbus','y':39.966686,'x':-82.992626,'addr':'162 N 6th St, Columbus, OH OH 43215','url':'http://www.blockfortcolumbus.com','twitter':'blockfortcols'},
+{'name':'Blue Label Digital Printing','y':39.722419,'x':-82.527183,'addr':'3750 Lancaster New Lexington Rd SE Suite 21 OH 43130','url':'http://www.bluelabeldigital.com','twitter':'bluelabelpress'},
+{'name':'Blystone Farm','y':39.803667342,'x':-82.8425746,'addr':'8677 Oregon Rd OH 43110','url':'https://blystonefarm.com/','twitter':'Blystonefarm'},
+{'name':'Bob Caldwell Automotive','y':40.060270742,'x':-82.96883769,'addr':'1888 Morse Rd Columbus OH 43229','url':'https://www.caldwellchrysler.com','twitter':'BCaldwellCDJR'},
+{'name':'Bob Caldwell Automotive','y':40.085986463,'x':-82.95605701,'addr':'2300 E Dublin Granville Rd Columbus OH 43229','url':'https://www.caldwellchrysler.com','twitter':''},
+{'name':'Borgata Pizza Cafe','y':40.089638,'x':-83.050929,'addr':'2285 W Dublin-Granville Rd Suite 113 OH 43085','url':'http://www.borgatapizzacafe.com','twitter':''},
+{'name':'Borgata Pizza Cafe','y':40.084941862,'x':-82.95691797,'addr':'5701 Parkville St Columbus OH 43229','url':'http://www.borgatapizzacafe.com','twitter':'borgatapizza'},
+{'name':'Branch','y':39.976699769,'x':-83.00344285,'addr':'685 N High St Columbus OH 43215','url':'http://Branch614.com','twitter':''},
+{'name':'BrewDog Brewing Co','y':39.845437202,'x':-82.82918103,'addr':'96 Gender Rd Canal Winchester OH 43110','url':'https://www.brewdog.com','twitter':'BrewDogUSA'},
+{'name':'Brioso Coffee','y':39.965525552,'x':-82.99607319,'addr':'329 E Long St Columbus OH 43215','url':'http://www.briosocoffee.com/','twitter':'cafebrioso'},
+{'name':'Bullseye Media LLC','y':40.140113,'x':-82.979052,'addr':'1491 Polaris Parkway Suite 121 OH 43240','url':'http://thebullseyemedia.com','twitter':'Bullseye_Media'},
+{'name':'Cameron Mitchell Restaurants','y':39.968071,'x':-83.009694,'addr':'299 W Nationwide Blvd Columbus OH 43215','url':'http://cameronmitchell.com/','twitter':'CMRColumbus'},
+{'name':'Cameron s American Bistro','y':40.089811,'x':-83.045667,'addr':'2050 W Dublin Granville Rd Columbus OH 43085','url':'https://www.cameronsamericanbistro.com','twitter':'CMRColumbus'},
+{'name':'Cap City Fine Diner and Bar','y':40.09963,'x':-83.109825,'addr':'6598 Riverside Dr Dublin OH 43017','url':'https://capcityfinediner.com/','twitter':''},
+{'name':'Cap City Fine Diner and Bar','y':39.987062439,'x':-83.02508826,'addr':'1299 Olentangy River Rd Columbus OH 43212','url':'https://capcityfinediner.com/','twitter':''},
+{'name':'Cap City Fine Diner and Bar','y':40.052155,'x':-82.867416,'addr':'1301 Stoneridge Dr Gahanna OH 43230','url':'https://capcityfinediner.com/','twitter':'CMRColumbus'},
+{'name':'Carenection','y':40.103057,'x':-82.986675,'addr':'1103 Schrock Rd #205 OH 43229','url':'https://www.carenection.com','twitter':'carenection'},
+{'name':'Caskey Dry Cleaning','y':39.937322852,'x':-82.99742481,'addr':'47 W Gates St Columbus OH 43206','url':'http://www.caskeycleaners.com','twitter':''},
+{'name':'Caster Connection','y':40.000849531,'x':-83.13216464,'addr':'2380 International St Columbus OH 43228','url':'https://casterconnection.com/','twitter':'Caster_Connect'},
+{'name':'Cedar Grove Lodging & Event Lodge','y':39.45058493,'x':-82.51662893,'addr':'19555 State Rte 664 Logan OH 43138','url':'http://www.CedarGroveLodging.com','twitter':'CedarGroveHH'},
+{'name':'Chelsea Borough Home','y':40.0984308,'x':-83.1135644,'addr':'54 S High St Dublin OH 43017','url':'http://www.facebook.com/ChelseaBoroughHome','twitter':'ChelseaBorough'},
+{'name':'Citadel Cafe','y':40.031483763,'x':-83.14256553,'addr':'4734 Cemetery Rd Hilliard OH 43026','url':'http://www.citadelcafehilliard.com/','twitter':''},
+{'name':'City Barbecue','y':40.158478852,'x':-83.09051484,'addr':'3758 W Powell Rd Powell OH 43065','url':'https://www.citybbq.com/','twitter':''},
+{'name':'City Barbecue','y':40.057085988,'x':-83.07503209,'addr':'2111 W Henderson Rd Columbus OH 43220','url':'https://www.citybbq.com/','twitter':''},
+{'name':'City Barbecue','y':39.878808281,'x':-83.06305318,'addr':'2261 Stringtown Rd Grove City OH 43123','url':'https://www.citybbq.com/','twitter':''},
+{'name':'City Barbecue','y':40.142157048,'x':-82.99012635,'addr':'8491 Sancus Blvd Columbus OH 43240','url':'https://www.citybbq.com/','twitter':''},
+{'name':'City Barbecue','y':40.109715,'x':-82.925593,'addr':'600 S State St Westerville OH 43081','url':'https://www.citybbq.com/','twitter':''},
+{'name':'City Barbecue','y':39.954702,'x':-82.83887,'addr':'5979 E Main St Columbus OH 43213','url':'https://www.citybbq.com/','twitter':''},
+{'name':'City Barbecue','y':40.058244882,'x':-82.44605729,'addr':'1195 W Church St Newark OH 43055','url':'https://www.citybbq.com/','twitter':'CityBarbeque'},
+{'name':'Clark Graphics, Inc.','y':39.985107647,'x':-83.10603494,'addr':'1550 N Wilson Rd Columbus OH 43204','url':'http://www.clarkgraphicsinc.com/','twitter':''},
+{'name':'Clintonville Outfitters','y':40.020671264,'x':-83.01298404,'addr':'2864 N High St Columbus OH 43202','url':'http://www.clintonvilleoutfitters.com/','twitter':'cvillegearshop'},
+{'name':'Columbus Brewing Co','y':39.968163391,'x':-83.07041808,'addr':'2555 Harrison Rd Columbus OH 43204','url':'https://www.columbusbrewing.com','twitter':'columbusbrewing'},
+{'name':'Columbus Eagles FC, LLC','y':39.957239,'x':-82.800061,'addr':'1312 Epworth Ave Reynoldsburg OH 43068','url':'http://www.columbuseaglesfc.com/wp/','twitter':'columbuseagles'},
+{'name':'Columbus Running Company','y':40.105285763,'x':-83.16393268,'addr':'6465 Perimeter Dr Dublin OH 43016','url':'https://www.columbusrunning.com','twitter':''},
+{'name':'Columbus Running Company','y':40.127210703,'x':-82.93208888,'addr':'50 N State St Westerville OH 43081','url':'https://www.columbusrunning.com','twitter':''},
+{'name':'Columbus Running Company','y':39.915024409,'x':-82.78001007,'addr':'1250 Hill Rd N Pickerington OH 43147','url':'https://www.columbusrunning.com','twitter':''},
+{'name':'Columbus Sign Company','y':39.985427698,'x':-82.96394211,'addr':'1515 E Fifth Ave Columbus OH 43219','url':'http://www.columbussign.com','twitter':''},
+{'name':'Combustion Brewery & Taproom','y':39.885097571,'x':-82.75578065,'addr':'80 W Church St Pickerington OH 43147','url':'http://www.combustionbrewing.com','twitter':'CombustionBT'},
+{'name':'Commonhouse Ales','y':39.973595,'x':-83.047822,'addr':'1130 Dublin Rd Columbus OH 43215','url':'http://www.commonhouseales.com','twitter':'commonhouseales'},
+{'name':'Corner Stone Craft Beer & Wine','y':39.963053,'x':-82.981654,'addr':'61 Parsons Ave Columbus OH 43215','url':'http://www.cornerstonecolumbus.com/','twitter':'CornerStoneCols'},
+{'name':'CornerSmiths','y':39.842814,'x':-82.805623,'addr':'1 S High St Canal Winchester OH 43110','url':'https://www.facebook.com/CornerSmiths-176526355775492/','twitter':'CornerSmiths'},
+{'name':'Corporate Housing Systems, Inc.','y':40.107689788,'x':-83.10550812,'addr':'4338 Tuller Rd Dublin OH 43017','url':'http://www.corporatehousingsystems.com/','twitter':''},
+{'name':'CoverMyMeds','y':39.954391,'x':-83.004708,'addr':'2 Miranova Pl Columbus OH 43215','url':'https://www.covermymeds.com','twitter':'CoverMyMeds'},
+{'name':'Creative Art Bar','y':40.030713682,'x':-83.1597075,'addr':'3848 Lattimer St Hilliard OH 43026','url':'https://www.creativeartbar.com','twitter':''},
+{'name':'Creative Mobile Interiors','y':39.837290804,'x':-83.09178735,'addr':'6237 Seeds Rd Grove City OH 43123','url':'http://www.creativemobileinteriors.com/','twitter':''},
+{'name':'Crimson Cup Coffee','y':40.006927059,'x':-83.05818429,'addr':'2468 Northwest Blvd Upper Arlington OH 43221','url':'http://www.crimsoncup.com','twitter':''},
+{'name':'Crimson Cup Coffee','y':40.054889765,'x':-83.01992271,'addr':'4541 N High St Columbus OH 43214','url':'http://www.crimsoncup.com','twitter':'crimsoncup'},
+{'name':'CrossChx','y':39.956644,'x':-82.995079,'addr':'100 E Main St Columbus OH 43215','url':'https://crosschx.com','twitter':'CrossChx'},
+{'name':'Customized Girl','y':40.000555958,'x':-83.11151242,'addr':'2282 Westbrooke Dr Columbus OH 43228','url':'https://www.customizedgirl.com','twitter':'customizedgirl'},
+{'name':'Cyclebar Polaris','y':40.201521,'x':-82.910199,'addr':'3901 Worthington Rd Westerville OH 43082','url':'https://polaris.cyclebar.com/','twitter':''},
+{'name':'DSW','y':40.096764064,'x':-83.09111302,'addr':'3704 W Dublin Granville Rd Columbus OH 43235','url':'https://www.dsw.com/en/us/','twitter':''},
+{'name':'DSW','y':40.144166466,'x':-82.99077295,'addr':'1200 Polaris Pkwy Columbus OH 43240','url':'https://www.dsw.com/en/us/','twitter':''},
+{'name':'DSW','y':40.051352556,'x':-82.92182056,'addr':'3710 Easton Market Columbus OH 43219','url':'https://www.dsw.com/en/us/','twitter':''},
+{'name':'DSW','y':39.989497745,'x':-82.90004092,'addr':'810 Dsw Dr Columbus OH 43219','url':'https://www.dsw.com/en/us/','twitter':'DSWShoeLovers'},
+{'name':'Dairy Queen, Sunbury Rd','y':39.999493773,'x':-82.93934533,'addr':'1475 Sunbury Rd Columbus OH 43219','url':'https://www.facebook.com/SunburyRdDQ/','twitter':''},
+{'name':'Das KaffeeHaus von Frau Burkhart','y':39.940727425,'x':-82.99787303,'addr':'1036 S Front St Columbus OH 43206','url':'http://www.daskaffeehaus.us','twitter':'Das_KaffeeHaus'},
+{'name':'Das KaffeeHaus von Frau Burkhart','y':39.803757,'x':-82.808239,'addr':'20 E Columbus St Lithopolis OH 43136','url':'http://www.daskaffeehaus.us','twitter':''},
+{'name':'Delicious Real Estate','y':39.967458077,'x':-82.97923854,'addr':'823 E Long St Columbus OH 43203','url':'http://deliciousrealestate.com','twitter':'deliciousrealestate'},
+{'name':'Designed Evolution','y':39.985527698,'x':-82.96384211,'addr':'1515 E 5th Ave Columbus OH 43219','url':'http://designedevolution.com','twitter':'designedevo'},
+{'name':'Dirty Franks','y':39.957380479,'x':-82.99521365,'addr':'248 S 4th St Columbus OH 43215','url':'http://dirtyfrankscolumbus.com/','twitter':'dirtyfranksdogs'},
+{'name':'Doggie Day Spa','y':39.981996,'x':-83.04860237,'addr':'1627 W First Ave Grandview Heights OH 43212','url':'http://www.doggiedayspacolumbus.com','twitter':'DoggieDaySpaCbs'},
+{'name':'Donatos Pizza','y':40.102366179,'x':-83.15791072,'addr':'6810 Perimeter Loop Rd Dublin OH 43017','url':'https://www.donatos.com/','twitter':''},
+{'name':'Donatos Pizza','y':39.987101656,'x':-83.1511945,'addr':'1730 Hilliard Rome Rd Columbus OH 43026','url':'https://www.donatos.com/','twitter':''},
+{'name':'Donatos Pizza','y':39.943794795,'x':-83.14184643,'addr':'350 Norton Rd Columbus OH 43228','url':'https://www.donatos.com/','twitter':''},
+{'name':'Donatos Pizza','y':40.029145057,'x':-83.11697569,'addr':'3703 Fishinger Blvd Columbus OH 43026','url':'https://www.donatos.com/','twitter':''},
+{'name':'Donatos Pizza','y':39.942914909,'x':-83.08928782,'addr':'3389 Sullivant Ave Columbus OH 43204','url':'https://www.donatos.com/','twitter':''},
+{'name':'Donatos Pizza','y':40.064721818,'x':-83.08715118,'addr':'2522 Bethel Rd Columbus OH 43220','url':'https://www.donatos.com/','twitter':''},
+{'name':'Donatos Pizza','y':40.117236213,'x':-83.06548492,'addr':'1878 Hard Rd Columbus OH 43235','url':'https://www.donatos.com/','twitter':'donatos'},
+{'name':'Donatos Pizza','y':39.878764413,'x':-83.06265714,'addr':'2233 Stringtown Rd Grove City OH 43123','url':'https://www.donatos.com/','twitter':''},
+{'name':'Donatos Pizza','y':39.933015875,'x':-83.0541111,'addr':'2115 Eakin Rd Columbus OH 43223','url':'https://www.donatos.com/','twitter':''},
+{'name':'Donatos Pizza','y':39.991268,'x':-83.04063625,'addr':'1612 Northwest Blvd Columbus OH 43212','url':'https://www.donatos.com/','twitter':''},
+{'name':'Donatos Pizza','y':40.072426,'x':-83.018976,'addr':'5388 N High St Columbus OH 43214','url':'https://www.donatos.com/','twitter':''},
+{'name':'Donatos Pizza','y':40.004885154,'x':-83.00901715,'addr':'2084 N High St Columbus OH 43201','url':'https://www.donatos.com/','twitter':''},
+{'name':'Donatos Pizza','y':39.981206526,'x':-83.00435111,'addr':'920 N High St Columbus OH 43201','url':'https://www.donatos.com/','twitter':''},
+{'name':'Donatos Pizza','y':39.90355412,'x':-82.9953438,'addr':'2835 S High St Columbus OH 43207','url':'https://www.donatos.com/','twitter':''},
+{'name':'Donatos Pizza','y':39.957415516,'x':-82.98993224,'addr':'280 S Grant Ave Columbus OH 43215','url':'https://www.donatos.com/','twitter':''},
+{'name':'Donatos Pizza','y':40.031917,'x':-82.976747,'addr':'1366 Oakland Park Ave Columbus OH 43224','url':'https://www.donatos.com/','twitter':''},
+{'name':'Donatos Pizza','y':39.938517,'x':-82.968748,'addr':'1000 Thurman Ave Columbus OH 43206','url':'https://www.donatos.com/','twitter':''},
+{'name':'Donatos Pizza','y':40.07770004,'x':-82.96659939,'addr':'1891 Tamarack Cir N Columbus OH 43229','url':'https://www.donatos.com/','twitter':''},
+{'name':'Donatos Pizza','y':40.083172387,'x':-82.94524465,'addr':'2769 Northland Plaza Dr Columbus OH 43231','url':'https://www.donatos.com/','twitter':''},
+{'name':'Donatos Pizza','y':39.8774872,'x':-82.93119673,'addr':'4405 Alum Creek Dr Obetz OH 43207','url':'https://www.donatos.com/','twitter':''},
+{'name':'Donatos Pizza','y':39.998162344,'x':-82.93019549,'addr':'1508 N Cassady Ave Columbus OH 43219','url':'https://www.donatos.com/','twitter':''},
+{'name':'Donatos Pizza','y':39.956814045,'x':-82.92359659,'addr':'2800 E Main St Columbus OH 43209','url':'https://www.donatos.com/','twitter':''},
+{'name':'Donatos Pizza','y':40.052617286,'x':-82.91964721,'addr':'4055 Morse Xing Columbus OH 43219','url':'https://www.donatos.com/','twitter':''},
+{'name':'Donatos Pizza','y':39.953470146,'x':-82.87713623,'addr':'1095 S Hamilton Rd Whitehall OH 43227','url':'https://www.donatos.com/','twitter':''},
+{'name':'Donatos Pizza','y':39.915896955,'x':-82.86371177,'addr':'2922 Noe Bixby Rd Blacklick Estates OH 43232','url':'https://www.donatos.com/','twitter':''},
+{'name':'Donatos Pizza','y':39.982311849,'x':-82.81786069,'addr':'6965 E Broad St Columbus OH 43213','url':'https://www.donatos.com/','twitter':''},
+{'name':'Dublin Food Pantry','y':40.099243,'x':-83.117158,'addr':'81 W Bridge St Dublin OH 43017','url':'http://www.dublinfoodpantry.org','twitter':'DublinPantry'},
+{'name':'Dublin Village Tavern','y':40.09893275,'x':-83.1136645,'addr':'27 S High St Dublin OH 43017','url':'http://www.thedublinvillagetavern.com','twitter':'dublinvillagetav'},
+{'name':'Duck Donuts','y':40.12385023,'x':-83.0901234,'addr':'7717 Sawmill Rd Columbus OH 43016','url':'https://www.duckdonuts.com/','twitter':'duckdonuts'},
+{'name':'Duck Donuts','y':40.15384178,'x':-83.00127154,'addr':'825 Polaris Pkwy OH 43082','url':'https://www.duckdonuts.com/','twitter':''},
+{'name':'Eddys Chicken and Waffles','y':39.94866,'x':-82.94936,'addr':'1808 E Livingston Ave Columbus OH 43205','url':'https://eddyschickenandwaffles.com','twitter':''},
+{'name':'Eddys Chicken and Waffles','y':39.908797753,'x':-82.86475678,'addr':'3252 Noe Bixby Rd Blacklick Estates OH 43232','url':'https://eddyschickenandwaffles.com','twitter':'eddyschicken'},
+{'name':'Elevator Brewing Company','y':39.965657667,'x':-83.0013058,'addr':'161 N High St Columbus OH 43215','url':'http://www.elevatorbrewery.com','twitter':'elevatorbrewing'},
+{'name':'Endeavor Brewing Company','y':39.988088,'x':-83.030499,'addr':'909 W 5th Ave Columbus OH 43212','url':'https://endeavorbrewingco.com/','twitter':'EndeavorBrewing'},
+{'name':'Equitas Health','y':39.983456308,'x':-83.00479304,'addr':'1033 N High St Columbus OH 43201','url':'http://www.equitashealth.com','twitter':''},
+{'name':'Equitas Health','y':39.967665625,'x':-82.97742788,'addr':'889 E Long St Columbus OH 43203','url':'http://www.equitashealth.com','twitter':'EquitasHealth'},
+{'name':'Eye Columbus','y':39.9431145,'x':-82.996937,'addr':'933 S High St Columbus OH 43206','url':'http://www.eyecolumbus.com/','twitter':'eyecolumbus'},
+{'name':'Eye Columbus','y':40.020431271,'x':-82.86641683,'addr':'83 N Hamilton Rd Gahanna OH 43230','url':'http://www.eyecolumbus.com/','twitter':''},
+{'name':'Eye Columbus','y':40.059655665,'x':-82.86339119,'addr':'5081 N Hamilton Rd Columbus OH 43230','url':'http://www.eyecolumbus.com/','twitter':''},
+{'name':'Fabtique','y':40.007216329,'x':-83.0546383,'addr':'1657 W Lane Ave Upper Arlington OH 43221','url':'http://fabtique.clothing/','twitter':'Fabtique_Style'},
+{'name':'Fleet Feet Sports + Frontrunner','y':40.157261437,'x':-82.99422956,'addr':'1270 E Powell Rd Lewis Center OH 43035','url':'http://fleetfeetcolumbus.com/','twitter':'FleetFeetCbus'},
+{'name':'Flesh To Fantasy Springfield','y':39.923321056,'x':-83.78429522,'addr':'1629 E Main St Springfield OH 45503','url':'http://www.facebook.com/f2fspringfield','twitter':'FleshtoFantasy'},
+{'name':'Four String Brewing Company','y':39.967557,'x':-83.07823,'addr':'660 N Hague Ave Columbus OH 43204','url':'http://www.fourstringbrewing.com','twitter':'fourstringbrew'},
+{'name':'Four String Brewing Company','y':39.989134286,'x':-83.03290671,'addr':'985 W 6th Ave Columbus OH 43212','url':'http://www.fourstringbrewing.com','twitter':''},
+{'name':'Franklinton Cycleworks','y':39.959276,'x':-83.024712,'addr':'897 W Broad St Columbus OH 43222','url':'https://www.franklintoncycleworks.org/','twitter':''},
+{'name':'Friendship CrossFit','y':40.092286,'x':-83.088069,'addr':'6625 Reflections Dr Columbus OH 43017','url':'https://friendshipcrossfit.com/','twitter':'friendshipcf'},
+{'name':'GSW','y':40.140432,'x':-82.964348,'addr':'500 Olde Worthington Rd Westerville OH 43082','url':'http://www.gsw-w.com/','twitter':'gswspeakpeople'},
+{'name':'Gena s Restaurant','y':40.083141146,'x':-82.89566183,'addr':'5947 Sunbury Rd Westerville OH 43081','url':'http://genasrestaurant.com/','twitter':''},
+{'name':'German Village Guest House','y':39.9444272,'x':-82.9922416,'addr':'177 E Whittier St Columbus OH 43206','url':'http://www.gvguesthouse.com/','twitter':''},
+{'name':'German Village Guest House','y':39.947679508,'x':-82.98978299,'addr':'748 Jaeger St Columbus OH 43206','url':'http://www.gvguesthouse.com/','twitter':'gvguesthouse'},
+{'name':'Good Vibes Winery','y':40.125929,'x':-82.931612,'addr':'2 S State St Westerville OH 43081','url':'http://www.goodvibeswinery.com','twitter':'GoodVibesWinery'},
+{'name':'Goodfellow s Tonsorial Parlor','y':39.94451925,'x':-82.9972085,'addr':'860 S High St Columbus OH 43206','url':'http://goodfellowscolumbus.com','twitter':''},
+{'name':'Grandview Cafe','y':39.9844201,'x':-83.04471388,'addr':'1312 Grandview Ave Grandview Heights OH 43212','url':'http://www.balboagrandview.com/','twitter':'balboacolumbus'},
+{'name':'Grandview Grind Coffee House','y':39.986720871,'x':-83.04462352,'addr':'1423 Grandview Ave Columbus OH 43212','url':'https://www.facebook.com/Grandview-Grind-248915351871033/','twitter':'GrandviewGrind'},
+{'name':'Great Lakes Brewing Company','y':41.484524337,'x':-81.70387584,'addr':'2516 Market Ave Cleveland OH 44113','url':'https://www.greatlakesbrewing.com','twitter':'GLBC_Cleveland'},
+{'name':'Grove City Jolly Pirate Donuts','y':39.891053,'x':-83.085947,'addr':'3118 Southwest Blvd Grove City OH 43123','url':'https://www.facebook.com/Jolly-Pirate-Donuts-108162949225972/','twitter':''},
+{'name':'Hamptons On King Bar and Grill','y':39.990395719,'x':-83.01266666,'addr':'234 King Ave Columbus OH 43201','url':'http://www.hamptonsonking.com','twitter':'HamptonsOnKing_'},
+{'name':'Haven Collective','y':39.99874564,'x':-83.07543637,'addr':'2025 Riverside Dr Upper Arlington OH 43221','url':'https://www.havencolumbus.com/','twitter':''},
+{'name':'HealthFirst Chiropractic','y':40.106339351,'x':-82.92491977,'addr':'792 S State St Westerville OH 43081','url':'livehealthfirst.com','twitter':''},
+{'name':'Hempy Water','y':40.802910767,'x':-83.52004707,'addr':'505 Smith St Forest OH 45843','url':'http://www.hempywater.com','twitter':'HempyWater'},
+{'name':'Hendocs Pub','y':40.010818333,'x':-83.01025187,'addr':'2375 N High St Columbus OH 43202','url':'https://www.yelp.com/biz/hendocs-pub-columbus','twitter':'Hendocs'},
+{'name':'Hofbrauhaus Columbus','y':39.974237066,'x':-83.025901,'addr':'800 Goodale Blvd Grandview Heights OH 43212','url':'https://www.hofbrauhauscolumbus.com','twitter':'hbhcolumbus'},
+{'name':'Hoover Haus Assisted Living Center','y':39.8884538,'x':-83.0690587,'addr':'3675 Hoover Rd Grove City OH 43123','url':'http://www.hooverhaus.com','twitter':''},
+{'name':'Hot Chicken Takeover','y':40.047656727,'x':-83.02017584,'addr':'4203 N High St Columbus OH 43214','url':'https://hotchickentakeover.com','twitter':''},
+{'name':'Hot Chicken Takeover','y':40.054331,'x':-82.913937,'addr':'4098 Worth Ave Columbus OH 43219','url':'https://hotchickentakeover.com','twitter':''},
+{'name':'Hudson 29 Kitchen and Drink','y':40.007153813,'x':-83.05323974,'addr':'1600 W Lane Ave Upper Arlington OH 43221','url':'https://hudson29.com/','twitter':'CMRColumbus'},
+{'name':'HustleWorks','y':39.958839185,'x':-83.01162493,'addr':'421 W State St Columbus OH 43215','url':'https://hustleworks.com','twitter':'hustleworks'},
+{'name':'Ill Mannered Brewing Co.','y':40.163128036,'x':-83.07352929,'addr':'30 Grace Dr Powell OH 43065','url':'http://www.illmanneredbeer.com','twitter':'illmanneredbeer'},
+{'name':'Inventure! Kids  Science Lab','y':40.157279,'x':-83.091598,'addr':'9798 Sawmill Pkwy Powell OH 43065','url':'','twitter':'InventureKSL'},
+{'name':'J.Bentley Hair Studio & Day Spa','y':40.172425,'x':-83.089099,'addr':'Moreland St Powell OH 43065','url':'http://jbentley.com/','twitter':'jbentleystudio'},
+{'name':'Jeni s Splendid Ice Cream','y':40.099535,'x':-83.113788,'addr':'2 W Bridge St Dublin OH 43017','url':'https://jenis.com','twitter':''},
+{'name':'Jeni s Splendid Ice Cream','y':40.157934958,'x':-83.0751696,'addr':'8 S Liberty St Powell OH 43065','url':'https://jenis.com','twitter':''},
+{'name':'Jeni s Splendid Ice Cream','y':39.984030297,'x':-83.04483758,'addr':'1281 Grandview Ave Grandview Heights OH 43212','url':'https://jenis.com','twitter':''},
+{'name':'Jeni s Splendid Ice Cream','y':40.048611815,'x':-83.02029386,'addr':'4247 N High St Columbus OH 43214','url':'https://jenis.com','twitter':''},
+{'name':'Jeni s Splendid Ice Cream','y':39.9723472,'x':-83.0043318,'addr':'59 Spruce St Columbus OH 43215','url':'https://jenis.com','twitter':''},
+{'name':'Jeni s Splendid Ice Cream','y':39.977024599,'x':-83.00350635,'addr':'714 N High St Columbus OH 43215','url':'https://jenis.com','twitter':''},
+{'name':'Jeni s Splendid Ice Cream','y':39.958808,'x':-82.999984,'addr':'160 S High St Columbus OH 43215','url':'https://jenis.com','twitter':''},
+{'name':'Jeni s Splendid Ice Cream','y':39.944376,'x':-82.992688,'addr':'903 Mohawk St Columbus OH 43206','url':'https://jenis.com','twitter':''},
+{'name':'Jeni s Splendid Ice Cream','y':39.957281,'x':-82.941875,'addr':'2156 E Main St Bexley OH 43209','url':'https://jenis.com','twitter':''},
+{'name':'Jeni s Splendid Ice Cream','y':40.051732,'x':-82.915535,'addr':'3998 Gramercy St Columbus OH 43219','url':'https://jenis.com','twitter':''},
+{'name':'Jennings Java Coffee Roasters','y':39.826338556,'x':-83.15439624,'addr':'6795 Meadowlark Ct Harrisburg OH 43146','url':'https://jenningsjava.com/','twitter':'jenningsjava'},
+{'name':'Jimmy V’s Grill & Pub, Westerville','y':40.126029,'x':-82.931512,'addr':'1 S State St Westerville OH 43081','url':'http://www.jimmyvswesterville.com','twitter':'jimmyvsuptown'},
+{'name':'Kahiki Foods','y':39.99142,'x':-82.856031,'addr':'1098 Morrison Rd Gahanna OH 43230','url':'http://www.kahiki.com','twitter':'KahikiFoods'},
+{'name':'Keep It Simple Socks','y':40.000413465,'x':-82.99765347,'addr':'387 E 16th Ave Columbus OH 43201','url':'http://www.keepitsimplesocks.com','twitter':'KeepItSimpleSox'},
+{'name':'Kendle Team','y':40.054431,'x':-82.913837,'addr':'4098 Worth Ave Columbus OH 43219','url':'http://kendleteam.com','twitter':'kendleteam'},
+{'name':'Kickmaster Footgolf','y':39.900987595,'x':-83.03922193,'addr':'1700 Dyer Rd Grove City OH 43123','url':'http://www.kickmasterfootgolf.com','twitter':'KickMaster_FG'},
+{'name':'King Avenue 5','y':39.991133077,'x':-83.03249823,'addr':'945 King Ave Columbus OH 43212','url':'https://kingavenuefive.com','twitter':'KingAvenue5'},
+{'name':'Kittie s Cakes','y':39.95204802,'x':-82.99595302,'addr':'495 S 3rd St Columbus OH 43215','url':'http://www.kittiescakes.com','twitter':''},
+{'name':'Kittie s Cakes','y':39.957090241,'x':-82.93418617,'addr':'2424 E Main St Bexley OH 43209','url':'http://www.kittiescakes.com','twitter':''},
+{'name':'LIFE church','y':39.955918035,'x':-82.94467713,'addr':'620 Alum Creek Dr Columbus OH 43205','url':'http://lifevineyardchurch.com','twitter':'LIFEvineyard'},
+{'name':'Land-Grant Brewing','y':39.957501786,'x':-83.01141825,'addr':'424 W Town St Columbus OH 43215','url':'https://www.landgrantbrewing.com','twitter':'LandGrantBeer'},
+{'name':'Le Meridien Columbus, The Joseph','y':39.975105,'x':-83.003133,'addr':'620 N High St Columbus OH 43215','url':'http://www.lemeridiencolumbus.com/','twitter':'LMTheJoseph'},
+{'name':'Lineage Brewing','y':40.022681889,'x':-83.01352678,'addr':'2971 N High St Columbus OH 43202','url':'http://www.lineagebrew.com','twitter':'LineageBrew'},
+{'name':'Local Cantina','y':39.986820871,'x':-83.04452352,'addr':'1423 Grandview Ave Columbus OH 43212','url':'http://www.localcantina.com','twitter':'LocalCantina'},
+{'name':'Locker Soccer Academy','y':40.16019974,'x':-83.08225307,'addr':'300 W Case Ave Powell OH 43065','url':'https://www.lockersoccer.com/','twitter':''},
+{'name':'Locker Soccer Academy','y':40.01697583,'x':-82.88788005,'addr':'277 W Johnstown Rd Gahanna OH 43230','url':'https://www.lockersoccer.com/','twitter':''},
+{'name':'Los Guachos Taqueria','y':40.064705548,'x':-83.05689345,'addr':'5221 Godown Rd Columbus OH 43235','url':'http://los-guachos.com','twitter':'GuachosTaqueria'},
+{'name':'Los Guachos Taqueria','y':40.041492842,'x':-82.87660602,'addr':'1376 Cherry Bottom Rd Gahanna OH 43230','url':'http://los-guachos.com','twitter':''},
+{'name':'MIddle West Spirits','y':39.987634646,'x':-83.00476955,'addr':'1230 Courtland Ave Columbus OH 43201','url':'http://middlewestspirits.com','twitter':'middlewestspts'},
+{'name':'Magnetic Springs Water Company','y':40.005863,'x':-82.963639,'addr':'1917 Joyce Ave Columbus OH 43219','url':'https://www.magneticsprings.com/','twitter':'magneticsprings'},
+{'name':'Magnolia Dental','y':40.018958,'x':-83.061906,'addr':'1840 Zollinger Rd Upper Arlington OH 43221','url':'https://mymagnoliasmile.com/','twitter':''},
+{'name':'Magnolia Dental','y':39.351126149,'x':-82.97388302,'addr':'11 Medical Dr Chillicothe OH 45601','url':'https://mymagnoliasmile.com/','twitter':''},
+{'name':'Maple Craft, LLC','y':40.08899379,'x':-82.79473696,'addr':'5863 Zarley St New Albany OH 43054','url':'http://maplecraftcustomhomes.com/','twitter':'maplecrafthomes'},
+{'name':'Marathon Media and Signs','y':39.954907811,'x':-83.01663321,'addr':'254 S Grubb St Columbus OH 43215','url':'','twitter':''},
+{'name':'Marcella s','y':39.975205,'x':-83.003033,'addr':'615 N High St Columbus OH 43215','url':'https://marcellasrestaurant.com/','twitter':''},
+{'name':'Marcella s','y':40.144073064,'x':-82.99039174,'addr':'1319 Polaris Pkwy Columbus OH 43240','url':'https://marcellasrestaurant.com/','twitter':'CMRColumbus'},
+{'name':'Martini Modern Italian','y':39.971601,'x':-83.002466,'addr':'445 N High St Columbus OH 43215','url':'https://www.martinimodernitalian.com/','twitter':'CMRColumbus'},
+{'name':'McClellan s Taekwondo Academy','y':40.07029908,'x':-82.86263389,'addr':'5564 N Hamilton Rd Columbus OH 43230','url':'https://www.missmtkd.com','twitter':''},
+{'name':'Metcalf Design & Printing Center','y':40.019212576,'x':-82.88799414,'addr':'264 Agler Rd Gahanna OH 43230','url':'http://www.metcalfprinting.com','twitter':''},
+{'name':'Mikey s Late Night Slice','y':40.015644557,'x':-83.01117662,'addr':'15 E Duncan St Columbus OH 43202','url':'https://www.latenightslice.com/','twitter':''},
+{'name':'Mikey s Late Night Slice','y':39.983512182,'x':-83.00480427,'addr':'1030 N High St Columbus OH 43201','url':'https://www.latenightslice.com/','twitter':'LateNightSlice'},
+{'name':'Mikey s Late Night Slice','y':39.957170596,'x':-82.99517309,'addr':'268 S 4th St Columbus OH 43215','url':'https://www.latenightslice.com/','twitter':''},
+{'name':'Mills James','y':40.027170709,'x':-83.11152987,'addr':'3545 Fishinger Blvd Columbus OH 43026','url':'http://millsjames.com','twitter':'MillsJames'},
+{'name':'Mindstream Interactive','y':39.966269,'x':-83.006825,'addr':'West St Columbus OH 43215','url':'https://www.mindstreaminteractive.com/?utm_source=savethecrew&utm_medium=referral&utm_campaign=savethecrew','twitter':'MindstreamInt'},
+{'name':'Molly Woo s Asian Bistro','y':40.14119476,'x':-82.98060345,'addr':'1500 Polaris Pkwy Columbus OH 43240','url':'https://www.mollywoos.com/','twitter':'CMRColumbus'},
+{'name':'Mr. Mom Pet Sitting','y':40.083008793,'x':-83.11785552,'addr':'5751 Chatterfield Dr Dublin OH 43017','url':'http://www.mrmompetsitting.com','twitter':''},
+{'name':'National Automotive Brokerage Services','y':39.952438677,'x':-83.1248068,'addr':'4639 W Broad St Lincoln Village OH 43228','url':'','twitter':''},
+{'name':'Needham Skinner and Associates','y':39.948662179,'x':-82.98277825,'addr':'558 E Sycamore St Columbus OH 43206','url':'http://www.needhamskinner.com','twitter':''},
+{'name':'North High Brewing','y':39.988631,'x':-83.0058165,'addr':'1288 N High St Columbus OH 43201','url':'http://www.northhighbrewing.com/','twitter':'northhighbrew'},
+{'name':'Northwest Title','y':39.334341172,'x':-82.98239056,'addr':'37 N Paint St Chillicothe OH 45601','url':'http://www.nwtitle.com/','twitter':''},
+{'name':'Northwest Title','y':39.04785824,'x':-82.631889,'addr':'239 E Main St Jackson OH 45640','url':'http://www.nwtitle.com/','twitter':''},
+{'name':'Northwest Title','y':40.082696882,'x':-80.89226089,'addr':'227 E Main St Saint Clairsville OH 43950','url':'http://www.nwtitle.com/','twitter':''},
+{'name':'Ohio Laborers','y':40.106451924,'x':-82.92155201,'addr':'102 Dorchester Sq S Westerville OH 43081','url':'http://www.ohldc.com/','twitter':''},
+{'name':'Ohio Sweet Homes, LLC','y':39.971432,'x':-82.802951,'addr':'7420 Rodebaugh Rd Reynoldsburg OH 43068','url':'','twitter':''},
+{'name':'Old Skool','y':40.022167583,'x':-83.013386,'addr':'2941 N High St Columbus OH 43202','url':'http://www.oldskool614.com/','twitter':'OldSkool614'},
+{'name':'Olde Towne Flowers & Gifts','y':39.963286388,'x':-82.98164347,'addr':'45 Parsons Ave Columbus OH 43215','url':'http://www.otflowers.com','twitter':''},
+{'name':'Oldfield s North Fourth Tavern','y':39.995364,'x':-82.999044,'addr':'1571 N 4th St Columbus OH 43201','url':'','twitter':''},
+{'name':'Olentangy Pediatric Dentistry','y':40.167606,'x':-83.078508,'addr':'Clairedan Dr Powell OH 43065','url':'http://www.opdpowell.com','twitter':''},
+{'name':'Ologie','y':39.957540724,'x':-82.98728121,'addr':'447 E Main St Columbus OH 43215','url':'https://ologie.com/','twitter':'ologie'},
+{'name':'Olympus Cleaners','y':40.017245,'x':-83.142398,'addr':'4864 Stoneybrook Blvd Columbus OH 43026','url':'http://olympuscleaners.com','twitter':''},
+{'name':'One Line Coffee','y':39.9776164,'x':-83.0036277,'addr':'745 N High St Columbus OH 43215','url':'http://www.onelinecoffee.com/','twitter':'onelinecoffee'},
+{'name':'One Line Coffee','y':39.961243972,'x':-83.00045183,'addr':'41 S High St Columbus OH 43215','url':'http://www.onelinecoffee.com/','twitter':''},
+{'name':'Orthopedic ONE','y':40.105212301,'x':-83.16456787,'addr':'6840 Perimeter Dr Dublin OH 43016','url':'http://www.orthopedicone.com/','twitter':''},
+{'name':'Orthopedic ONE','y':40.061651156,'x':-83.09339211,'addr':'4605 Sawmill Rd Columbus OH 43220','url':'http://www.orthopedicone.com/','twitter':''},
+{'name':'Orthopedic ONE','y':40.304765,'x':-83.084874,'addr':'463 W Central Ave Delaware OH 43015','url':'http://www.orthopedicone.com/','twitter':''},
+{'name':'Orthopedic ONE','y':40.141971,'x':-82.946943,'addr':'N Cleveland Ave Westerville OH 43082','url':'http://www.orthopedicone.com/','twitter':''},
+{'name':'Orthopedic ONE','y':40.25009552,'x':-82.87130086,'addr':'700 W Cherry St Sunbury OH 43074','url':'http://www.orthopedicone.com/','twitter':''},
+{'name':'Orthopedic ONE','y':39.988897431,'x':-82.84258796,'addr':'170 Taylor Station Rd Gahanna OH 43213','url':'http://www.orthopedicone.com/','twitter':''},
+{'name':'Orthopedic ONE','y':39.855018795,'x':-82.82820446,'addr':'6201 Gender Rd Canal Winchester OH 43110','url':'http://www.orthopedicone.com/','twitter':''},
+{'name':'Park Your Paws Doggie Daycare','y':40.054277796,'x':-83.0003142,'addr':'4366 Indianola Ave Columbus OH 43214','url':'http://www.parkyourpaws.org','twitter':''},
+{'name':'Pathways Financial Credit Union','y':40.072865442,'x':-82.86246469,'addr':'5665 N Hamilton Rd Columbus OH 43230','url':'https://www.pathwayscu.com/','twitter':'PathwaysFCU'},
+{'name':'Pecan Penny s Barbecue','y':39.956657435,'x':-82.99496487,'addr':'113 E Main St Columbus OH 43215','url':'http://pecanpennys.com/','twitter':''},
+{'name':'Pelotonia','y':39.968171,'x':-83.009594,'addr':'299 W Nationwide Blvd Columbus OH 43215','url':'https://www.pelotonia.org','twitter':'Pelotonia'},
+{'name':'Piada Italian Street Food','y':39.772356,'x':-84.06463,'addr':'3524 Pentagon Blvd Beavercreek OH 45431','url':'https://mypiada.com/','twitter':''},
+{'name':'Piada Italian Street Food','y':40.10492903,'x':-83.16065449,'addr':'6335 Perimeter Dr Dublin OH 43016','url':'https://mypiada.com/','twitter':''},
+{'name':'Piada Italian Street Food','y':39.98241647,'x':-83.14719941,'addr':'5436 Westpoint Plaza Dr Columbus OH 43228','url':'https://mypiada.com/','twitter':''},
+{'name':'Piada Italian Street Food','y':40.099391621,'x':-83.0913309,'addr':'6495 Sawmill Rd Columbus OH 43017','url':'https://mypiada.com/','twitter':''},
+{'name':'Piada Italian Street Food','y':40.006964608,'x':-83.04567306,'addr':'1315 W Lane Ave Columbus OH 43221','url':'https://mypiada.com/','twitter':''},
+{'name':'Piada Italian Street Food','y':39.876776716,'x':-83.03970951,'addr':'4139 Buckeye Pkwy Grove City OH 43123','url':'https://mypiada.com/','twitter':''},
+{'name':'Piada Italian Street Food','y':40.107826,'x':-83.016792,'addr':'7227 N High St Worthington OH 43085','url':'https://mypiada.com/','twitter':''},
+{'name':'Piada Italian Street Food','y':39.956974,'x':-82.929612,'addr':'2585 E Main St Bexley OH 43209','url':'https://mypiada.com/','twitter':''},
+{'name':'Piada Italian Street Food','y':40.0554151,'x':-82.86656284,'addr':'4697 Morse Rd Gahanna OH 43230','url':'https://mypiada.com/','twitter':''},
+{'name':'Pigskin Brewing Company','y':40.0199455,'x':-82.8822559,'addr':'81 Mill St Gahanna OH 43230','url':'https://pigskinbrewingcompany.com','twitter':'PigskinBrewCo'},
+{'name':'Pins Mechanical Company','y':40.099488494,'x':-83.10969922,'addr':'6558 Riverside Dr Dublin OH 43017','url':'https://www.pinsbar.com/','twitter':''},
+{'name':'Pins Mechanical Company','y':39.965443,'x':-82.996768,'addr':'141 N 4th St Columbus OH 43215','url':'https://www.pinsbar.com/','twitter':'pinsmechco'},
+{'name':'Pizza Cucinova','y':40.123939577,'x':-83.09011934,'addr':'7721 Sawmill Rd Columbus OH 43016','url':'https://pizzacucinova.com/','twitter':''},
+{'name':'Pizza Cucinova','y':39.98564239,'x':-83.02315365,'addr':'1187 Olentangy River Rd Columbus OH 43212','url':'https://pizzacucinova.com/','twitter':'pizzacucinova'},
+{'name':'Pizza Cucinova','y':40.153658,'x':-83.001213,'addr':'829 Polaris Pkwy OH 43082','url':'https://pizzacucinova.com/','twitter':''},
+{'name':'Pizza Cucinova','y':40.124013,'x':-82.930911,'addr':'79 S State St Westerville OH 43081','url':'https://pizzacucinova.com/','twitter':''},
+{'name':'Pizza Cucinova','y':40.053283763,'x':-82.91912155,'addr':'4044 Morse Xing Columbus OH 43219','url':'https://pizzacucinova.com/','twitter':''},
+{'name':'Platform Beer Company','y':39.971094294,'x':-82.99314344,'addr':'408 N 6th St Columbus OH 43215','url':'https://platformbeer.co/','twitter':''},
+{'name':'Platform Beer Company','y':41.486335,'x':-81.698977,'addr':'1998 Lorain Ave Cleveland OH 44113','url':'https://platformbeer.co/','twitter':'PlatformBeers'},
+{'name':'Polaris Massage Fix','y':40.157260046,'x':-82.99424726,'addr':'1266 E Powell Rd Lewis Center OH 43035','url':'http://www.polarismassagefix.com','twitter':'PolarisMassage'},
+{'name':'Pretentious Barrel House','y':39.981968,'x':-82.960643,'addr':'745 Taylor Ave Columbus OH 43219','url':'https://www.pretentiousbarrelhouse.com/','twitter':'PretentiousBH'},
+{'name':'Prime Social Group','y':39.967678,'x':-82.99897677,'addr':'232 N 3rd St Columbus OH 43215','url':'http://www.primesocial.com','twitter':'PrimeSocial'},
+{'name':'PromoWest Productions','y':39.969976,'x':-83.009598,'addr':'405 Neil Ave Columbus OH 43215','url':'http://www.promowestlive.com','twitter':'promowestlive'},
+{'name':'Pub Mahone','y':39.963723747,'x':-82.99989615,'addr':'31 E Gay St Columbus OH 43215','url':'http://pubmahone.com','twitter':'Pub_Mahone'},
+{'name':'Pursuit','y':39.981663412,'x':-83.00444053,'addr':'937 N High St Columbus OH 43201','url':'https://www.pursuityourself.com/','twitter':'pursuityourself'},
+{'name':'Quantum Health','y':40.117266719,'x':-83.00670622,'addr':'7450 Huntington Park Dr Columbus OH 43235','url':'http://quantum-health.com/','twitter':'QuantumHealth1'},
+{'name':'RAVE','y':39.963066,'x':-82.997589,'addr':'100 E Broad Street Suite 2200 OH 43215','url':'https://rave.agency/','twitter':'rave_agency'},
+{'name':'RDP Foodservice','y':40.032944173,'x':-82.99991393,'addr':'620 Oakland Park Ave Columbus OH 43214','url':'https://www.rdpoms.com/main/auth/login','twitter':''},
+{'name':'Rader Car Company','y':40.105391396,'x':-82.97773941,'addr':'1429 W Schrock Rd Columbus OH 43229','url':'http://www.radercarco.com/','twitter':'RaderCarCo'},
+{'name':'Rain One Inc.','y':40.000489101,'x':-82.81296514,'addr':'6871 Taylor Rd Blacklick OH 43004','url':'http://www.rain1.com/','twitter':''},
+{'name':'Red Apron Pizza Co','y':40.126705459,'x':-82.93147891,'addr':'10 E Main St Westerville OH 43081','url':'http://www.redapronpizzaco.com','twitter':''},
+{'name':'Resolute Athletic Complex','y':40.053647674,'x':-82.92323421,'addr':'3599 Chiller Ln Columbus OH 43219','url':'http://resoluteac.com','twitter':'The_ResoluteAC'},
+{'name':'Ritchie Realty Group','y':39.951987,'x':-82.99594,'addr':'502 S 3rd St Columbus OH 43215','url':'http://www.ritchierealtygroup.com/','twitter':''},
+{'name':'Rogers Krajnak Architects, Inc.','y':39.956679673,'x':-82.99684086,'addr':'264 S Third St Columbus OH 43215','url':'http://www.rogerskrajnak.com/','twitter':''},
+{'name':'Roosters','y':39.952424433,'x':-83.12511375,'addr':'4650 W Broad St Lincoln Village OH 43228','url':'https://www.roosterswings.com/corporate/','twitter':''},
+{'name':'Roosters','y':40.054463428,'x':-83.06826238,'addr':'1832 W Henderson Rd Columbus OH 43220','url':'https://www.roosterswings.com/corporate/','twitter':''},
+{'name':'Roosters','y':39.878601,'x':-83.047487,'addr':'1650 Stringtown Rd Grove City OH 43123','url':'https://www.roosterswings.com/corporate/','twitter':''},
+{'name':'Roosters','y':39.943943,'x':-82.9953255,'addr':'897 City Park Ave Columbus OH 43206','url':'https://www.roosterswings.com/corporate/','twitter':''},
+{'name':'Roosters','y':39.944043,'x':-82.9952255,'addr':'897 City Park Ave Columbus OH 43206','url':'https://www.roosterswings.com/corporate/','twitter':''},
+{'name':'Roosters','y':40.087533214,'x':-82.98578621,'addr':'1213 E Dublin Granville Rd Columbus OH 43229','url':'https://www.roosterswings.com/corporate/','twitter':''},
+{'name':'Roosters','y':40.085695,'x':-82.95451657,'addr':'2454 E Dublin Granville Rd Columbus OH 43229','url':'https://www.roosterswings.com/corporate/','twitter':'roosters'},
+{'name':'Roosters','y':39.968139161,'x':-82.87569762,'addr':'376 S Hamilton Rd Whitehall OH 43213','url':'https://www.roosterswings.com/corporate/','twitter':''},
+{'name':'Roosters','y':39.968239161,'x':-82.87559762,'addr':'376 S Hamilton Rd Whitehall OH 43213','url':'https://www.roosterswings.com/corporate/','twitter':''},
+{'name':'Roosters','y':40.096095,'x':-82.825766,'addr':'5499 New Albany Rd W Columbus OH 43054','url':'https://www.roosterswings.com/corporate/','twitter':''},
+{'name':'Ruby Tuesday Live','y':40.003594364,'x':-83.00091218,'addr':'1978 Summit St Columbus OH 43201','url':'Rubytuesdaylive.com','twitter':''},
+{'name':'Rusty Bucket','y':40.10331502,'x':-83.15902317,'addr':'6726 Perimeter Loop Rd Dublin OH 43017','url':'https://www.myrustybucket.com','twitter':''},
+{'name':'Rusty Bucket','y':40.007192666,'x':-83.05413263,'addr':'1635 W Lane Ave Upper Arlington OH 43221','url':'https://www.myrustybucket.com','twitter':''},
+{'name':'Rusty Bucket','y':40.122925773,'x':-83.03607828,'addr':'7800 Olentangy River Rd Columbus OH 43235','url':'https://www.myrustybucket.com','twitter':''},
+{'name':'Rusty Bucket','y':40.045647571,'x':-83.01964061,'addr':'4109 N High St Columbus OH 43214','url':'https://www.myrustybucket.com','twitter':''},
+{'name':'Rusty Bucket','y':39.968171,'x':-83.009594,'addr':'299 W Nationwide Blvd Columbus OH 43215','url':'https://www.myrustybucket.com','twitter':''},
+{'name':'Rusty Bucket','y':40.156652,'x':-83.002861,'addr':'759 Polaris Pkwy OH 43082','url':'https://www.myrustybucket.com','twitter':'MyRustyBucket'},
+{'name':'Rusty Bucket','y':39.957269,'x':-82.94146,'addr':'2158 E Main St Bexley OH 43209','url':'https://www.myrustybucket.com','twitter':''},
+{'name':'Rusty Bucket','y':40.051708,'x':-82.914024,'addr':'4062 Gramercy St Columbus OH 43219','url':'https://www.myrustybucket.com','twitter':''},
+{'name':'Rusty Bucket','y':40.020173486,'x':-82.86643694,'addr':'73 N Hamilton Rd Gahanna OH 43230','url':'https://www.myrustybucket.com','twitter':''},
+{'name':'Rusty Bucket','y':40.081641,'x':-82.816602,'addr':'180 Market St New Albany OH 43054','url':'https://www.myrustybucket.com','twitter':''},
+{'name':'Safelite Autoglass','y':40.116171215,'x':-82.99675687,'addr':'760 Dearborn Park Ln Columbus OH 43085','url':'https://www.safelite.com','twitter':''},
+{'name':'Safelite Autoglass','y':40.068641152,'x':-82.86274103,'addr':'5486 N Hamilton Rd Columbus OH 43230','url':'https://www.safelite.com','twitter':'safelite'},
+{'name':'Savor Safe Food','y':40.102933404,'x':-83.01718444,'addr':'6797 N High St Worthington OH 43085','url':'https://www.savorsafefood.com','twitter':''},
+{'name':'Sbarro','y':40.089911,'x':-83.045567,'addr':'2050 W Dublin Granville Rd Columbus OH 43085','url':'','twitter':''},
+{'name':'Sbarro','y':40.036401,'x':-83.017134,'addr':'3645 N High St Columbus OH 43214','url':'','twitter':''},
+{'name':'Sbarro','y':40.002966015,'x':-83.00863232,'addr':'1990 N High St Columbus OH 43201','url':'','twitter':''},
+{'name':'Seventh Son Brewing','y':39.98552775,'x':-82.99932463,'addr':'1101 N 4th St Columbus OH 43201','url':'www.seventhsonbrewing.com','twitter':'seventhsonbrew'},
+{'name':'Sharper Impressions Painting','y':40.131278046,'x':-83.19726795,'addr':'7801 Corporate Blvd Plain City OH 43064','url':'https://www.sharperimpressionspainting.com/','twitter':'SharperPaint'},
+{'name':'ShutterBug Studios Photography','y':40.112919894,'x':-82.9219652,'addr':'489 S Otterbein Ave Westerville OH 43081','url':'https://www.facebook.com/shutterbugstudiosphoto','twitter':''},
+{'name':'Smokehouse Brewing Company','y':39.973695,'x':-83.047722,'addr':'1130 Dublin Rd Columbus OH 43215','url':'','twitter':''},
+{'name':'Snyder Brick & Block','y':39.963038933,'x':-83.08617467,'addr':'3180 Valleyview Dr Columbus OH 43204','url':'http://www.snyderonline.com/','twitter':'smokeandbrew'},
+{'name':'Southern Glazer’s Wine & Spirits','y':39.981231,'x':-82.87678,'addr':'4800 Poth Rd Whitehall OH 43213','url':'http://www.southernglazers.com/location/ohio/','twitter':''},
+{'name':'Staas Brewing Company','y':40.300263,'x':-83.069439,'addr':'31 W Winter St Delaware OH 43015','url':'http://www.staasbrewing.com','twitter':'staasbrewing'},
+{'name':'Stanley Steemer Columbus','y':40.091221,'x':-83.143338,'addr':'5800 Innovation Dr Dublin OH 43016','url':'https://www.stanleysteemer.com/','twitter':'stanleysteemer'},
+{'name':'Stanley Steemer Columbus','y':40.144137888,'x':-82.72078836,'addr':'6215 Clover Valley Rd Johnstown OH 43031','url':'https://www.stanleysteemer.com/','twitter':''},
+{'name':'Submarine House','y':39.999936254,'x':-83.15331434,'addr':'2459 Hilliard Rome Rd Columbus OH 43026','url':'https://www.facebook.com/SubHouseHilliard','twitter':'SubmarineHouse'},
+{'name':'Subway','y':39.948239061,'x':-83.49975068,'addr':'3180 Old Columbus Rd London OH 43140','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':39.524000065,'x':-83.459879,'addr':'1377 Leesburg Ave Washington Court House OH 43160','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':39.885404186,'x':-83.4499693,'addr':'65 W High St London OH 43140','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':40.2401065,'x':-83.38686563,'addr':'1121 W 5th St Marysville OH 43040','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':40.426541,'x':-83.296579,'addr':'1 N Franklin St Richwood OH 43344','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':39.944960431,'x':-83.26613968,'addr':'97 E Main St West Jefferson OH 43162','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':39.981933282,'x':-83.14705885,'addr':'5283 Westpoint Plaza Dr Columbus OH 43228','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':39.951453,'x':-83.145783,'addr':'5465 W Broad St Lincoln Village OH 43228','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':39.927584,'x':-83.144113,'addr':'1167 Norton Rd Columbus OH 43119','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':39.825946278,'x':-83.14024503,'addr':'6997 Harrisburg Pike Harrisburg OH 43146','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':40.10374915,'x':-83.13663048,'addr':'5600 Post Rd Dublin OH 43017','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':40.032026324,'x':-83.13653064,'addr':'4498 Cemetery Rd Hilliard OH 43026','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':40.075771712,'x':-83.13498695,'addr':'5350 Tuttle Crossing Blvd Columbus OH 43016','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':39.920010625,'x':-83.12315948,'addr':'1577 Holt Rd Columbus OH 43228','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':40.099192622,'x':-83.12067687,'addr':'271 W Bridge St Dublin OH 43017','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':40.006515499,'x':-83.11773641,'addr':'4391 Old Roberts Rd Columbus OH 43228','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':40.031857774,'x':-83.11675975,'addr':'3880 Park Mill Run Dr Hilliard OH 43026','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':39.978916,'x':-83.103647,'addr':'3749 Twin Creeks Dr Columbus OH 43204','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':40.156628,'x':-83.093651,'addr':'9900 Brewster Ln Powell OH 43065','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':39.958534315,'x':-83.09269026,'addr':'3493 Great Western Blvd Columbus OH 43204','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':40.09450017,'x':-83.09146101,'addr':'2783 Martin Rd Columbus OH 43017','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':40.026096936,'x':-83.09127329,'addr':'3566 Riverside Dr Upper Arlington OH 43221','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':40.116042,'x':-83.090487,'addr':'7370 Sawmill Rd Columbus OH 43235','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':40.12414061,'x':-83.09011022,'addr':'7730 Sawmill Rd Columbus OH 43016','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':39.839227745,'x':-83.0770482,'addr':'2578 London Groveport Rd Grove City OH 43123','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':39.998613118,'x':-83.07531222,'addr':'1981 Riverside Dr Upper Arlington OH 43221','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':40.056912208,'x':-83.07456738,'addr':'2090 W Henderson Rd Columbus OH 43220','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':39.943707,'x':-83.073122,'addr':'2800 Sullivant Ave Columbus OH 43204','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':39.882514403,'x':-83.06943643,'addr':'3957 Hoover Rd Grove City OH 43123','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':40.117219533,'x':-83.06487248,'addr':'1860 Hard Rd Columbus OH 43235','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':39.768268011,'x':-83.060227,'addr':'3 Main St Commercial Point OH 43116','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':39.932396154,'x':-83.05058408,'addr':'2075 Eakin Rd Columbus OH 43223','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':39.989006,'x':-83.04879,'addr':'1576 W Fifth Ave Columbus OH 43212','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':40.006966259,'x':-83.0456443,'addr':'1320 W Lane Ave Columbus OH 43221','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':39.957208583,'x':-83.04198219,'addr':'1556 W Broad St Columbus OH 43222','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':39.98860603,'x':-83.04079973,'addr':'1288 W Fifth Ave Columbus OH 43212','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':40.063150912,'x':-83.04020704,'addr':'794 Bethel Rd Columbus OH 43214','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':40.124782222,'x':-83.036632,'addr':'7840 Olentangy River Rd Columbus OH 43235','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':39.916528333,'x':-83.035838,'addr':'1093 Frank Rd Columbus OH 43223','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':40.200821,'x':-83.027442,'addr':'Pullman Dr Lewis Center OH 43035','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':40.020804299,'x':-83.0248008,'addr':'2937 Olentangy River Rd Columbus OH 43202','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':40.066120983,'x':-83.01929851,'addr':'5059 N High St Columbus OH 43214','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':40.092553465,'x':-83.01786271,'addr':'905 N High St Worthington OH 43085','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':40.027443,'x':-83.014763,'addr':'3200 N High St Columbus OH 43202','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':39.983802269,'x':-83.01474555,'addr':'360 W Third Ave Columbus OH 43201','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':40.006404122,'x':-83.01428639,'addr':'2187 Neil Ave Columbus OH 43201','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':40.002116016,'x':-83.00846133,'addr':'1952 N High St Columbus OH 43201','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':39.997858545,'x':-83.00728718,'addr':'6 E 13th Ave Columbus OH 43201','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':40.156752,'x':-83.002761,'addr':'759 Polaris Pkwy OH 43082','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':39.970883588,'x':-83.00232762,'addr':'400 N High St Columbus OH 43215','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':39.965702333,'x':-83.0013146,'addr':'163 N High St Columbus OH 43215','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':39.959996417,'x':-83.00021598,'addr':'107 S High St Columbus OH 43215','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':39.954883898,'x':-82.99922554,'addr':'350 S High St Columbus OH 43215','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':39.963819349,'x':-82.99907226,'addr':'61 E Gay St Columbus OH 43215','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':39.959116,'x':-82.997321,'addr':'101 E Town St Columbus OH 43215','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':39.940656407,'x':-82.9964592,'addr':'1059 S High St Columbus OH 43206','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':39.89320845,'x':-82.99594674,'addr':'3386 S High St Columbus OH 43207','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':39.962840077,'x':-82.99522885,'addr':'195 E Broad St Columbus OH 43215','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':40.030885,'x':-82.993664,'addr':'700 E North Broadway St Columbus OH 43224','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':40.091087485,'x':-82.9917646,'addr':'6092 Boardwalk St Columbus OH 43229','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':40.117921537,'x':-82.988572,'addr':'7558 Worthington Galena Rd Columbus OH 43085','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':39.713275298,'x':-82.987137,'addr':'5030 Walnut St South Bloomfield OH 43103','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':40.061116392,'x':-82.98662261,'addr':'1251 Morse Rd Columbus OH 43229','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':39.94868075,'x':-82.982618,'addr':'740 Parsons Ave Columbus OH 43206','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':39.994107124,'x':-82.98126482,'addr':'1418 Cleveland Ave Columbus OH 43211','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':40.14129476,'x':-82.98050345,'addr':'1500 Polaris Pkwy Columbus OH 43240','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':39.952358,'x':-82.978699,'addr':'700 Childrens Dr Columbus OH 43205','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':40.087411078,'x':-82.97528705,'addr':'5892 Karl Rd Columbus OH 43229','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':39.972936556,'x':-82.97326433,'addr':'323 N 20th St Columbus OH 43203','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':39.927551874,'x':-82.96499475,'addr':'1855 Lockbourne Rd Columbus OH 43207','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':40.035747294,'x':-82.96324553,'addr':'3391 Cleveland Ave Columbus OH 43224','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':40.145265424,'x':-82.96217422,'addr':'2109 Polaris Pkwy Columbus OH 43240','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':39.719810261,'x':-82.953107,'addr':'320 Long St Ashville OH 43103','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':40.110031,'x':-82.95271042,'addr':'2455 W Schrock Rd Columbus OH 43229','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':40.06787,'x':-82.952357,'addr':'2499 Cleveland Ave Columbus OH 43229','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':40.059093,'x':-82.944114,'addr':'2810 Morse Rd Columbus OH 43231','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':39.621471724,'x':-82.94059999,'addr':'1211 N Court St Circleville OH 43113','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':39.948132,'x':-82.93873568,'addr':'2181 E Livingston Ave Columbus OH 43209','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':39.830013659,'x':-82.93254604,'addr':'2560 London Groveport Rd Groveport OH 43125','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':39.877776,'x':-82.931141,'addr':'4424 Alum Creek Dr Obetz OH 43207','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':40.113193797,'x':-82.92689241,'addr':'495 S State St Westerville OH 43081','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':39.956736761,'x':-82.92065325,'addr':'2910 E Main St Columbus OH 43209','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':40.057599249,'x':-82.91161172,'addr':'3970 Morse Rd Columbus OH 43219','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':40.031206945,'x':-82.91047475,'addr':'2832 Stelzer Rd Columbus OH 43219','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':39.973717309,'x':-82.89731176,'addr':'3912 E Broad St Whitehall OH 43213','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':40.131673,'x':-82.892967,'addr':'998 County Line Rd Westerville OH 43081','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':39.955631063,'x':-82.882334,'addr':'4343 E Main St Whitehall OH 43213','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':39.899663307,'x':-82.88145561,'addr':'4600 Winchester Pike Columbus OH 43232','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':39.929345317,'x':-82.87934583,'addr':'2191 S Hamilton Rd Columbus OH 43232','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':40.018786207,'x':-82.87759759,'addr':'110 Granville St Gahanna OH 43230','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':39.850457,'x':-82.875145,'addr':'999 Main St Groveport OH 43125','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':40.051868099,'x':-82.86622846,'addr':'321 Stoneridge Ln Gahanna OH 43230','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':40.065087286,'x':-82.86299345,'addr':'5352 N Hamilton Rd Columbus OH 43230','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':40.002996631,'x':-82.8610785,'addr':'604 Morrison Rd Gahanna OH 43230','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':39.954996638,'x':-82.86077317,'addr':'5137 E Main St Whitehall OH 43213','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':39.979298,'x':-82.843571,'addr':'6001 E Broad St Columbus OH 43213','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':39.85422616,'x':-82.83092362,'addr':'6452 Winchester Blvd Canal Winchester OH 43110','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':39.941663044,'x':-82.82992615,'addr':'1898 Brice Rd Reynoldsburg OH 43068','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':39.907418226,'x':-82.82454612,'addr':'3626 Gender Rd Columbus OH 43110','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':39.981575474,'x':-82.82435958,'addr':'6774 E Broad St Columbus OH 43213','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':40.090219592,'x':-82.82313024,'addr':'5210 New Albany Rd Columbus OH 43054','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':39.95518476,'x':-82.8065224,'addr':'7143 E Main St Reynoldsburg OH 43068','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':39.926050414,'x':-82.80476929,'addr':'6347 Tussing Rd Columbus OH 43068','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':40.089263296,'x':-82.79592922,'addr':'9725 E Johnstown Rd New Albany OH 43054','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':39.986103194,'x':-82.7835402,'addr':'8138 E Broad St Columbus OH 43068','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':39.913806009,'x':-82.77970053,'addr':'1164 Hill Rd N Pickerington OH 43147','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':39.847957,'x':-82.778277,'addr':'Meijer Dr Canal Winchester OH 43110','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':39.907644,'x':-82.736549,'addr':'7905 Refugee Rd Pickerington OH 43147','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':40.500289415,'x':-82.72450201,'addr':'6022 State Rte 95 Mount Gilead OH 43338','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':39.747397104,'x':-82.65491966,'addr':'2785 Columbus-Lancaster Rd NW Lancaster OH 43130','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':39.733970537,'x':-82.63034798,'addr':'1522 River Valley Cir S Lancaster OH 43130','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':39.719832013,'x':-82.59870571,'addr':'187 E 6th Ave Lancaster OH 43130','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Subway','y':39.713710512,'x':-82.57904965,'addr':'1191 E Main St Lancaster OH 43130','url':'http://www.subway.com/en-us','twitter':''},
+{'name':'Super wash Cridersville','y':40.653539752,'x':-84.13401518,'addr':'111 S Dixie Hwy Cridersville OH 45806','url':'http://www.superwash.com/','twitter':''},
+{'name':'THE DAYTON BEER COMPANY, LLC','y':39.762198206,'x':-84.18516124,'addr':'41 Madison St Dayton OH 45402','url':'http://thedaytonbeerco.com','twitter':'thedaytonbeerco'},
+{'name':'THE FLAG LADY S FLAG STORE','y':40.055412,'x':-83.019893,'addr':'4567 N High St Columbus OH 43214','url':'https://flagladyusa.com/','twitter':'TheFlagLady'},
+{'name':'Tabletop Game Cafe','y':40.050111143,'x':-83.02020714,'addr':'4316 N High St Columbus OH 43214','url':'http://tabletopgamecafe.com','twitter':''},
+{'name':'Technicare Carpet Cleaning and more...','y':40.085159869,'x':-83.16900325,'addr':'6616 Carinlough Pl Dublin OH 43016','url':'https://mytechnicare.com','twitter':''},
+{'name':'Technicare Carpet Cleaning and more...','y':40.147769,'x':-83.073564,'addr':'10366 Liberty Rd Powell OH 43065','url':'https://mytechnicare.com','twitter':'MyTechnicare'},
+{'name':'Technicare Carpet Cleaning and more...','y':40.005084221,'x':-83.04941383,'addr':'1462 Berkshire Rd Upper Arlington OH 43221','url':'https://mytechnicare.com','twitter':''},
+{'name':'The Avenue Steak Tavern','y':39.984465,'x':-83.044802,'addr':'1307 Grandview Ave Grandview Heights OH 43212','url':'https://theavenuesteaktavern.com/','twitter':'CMRColumbus'},
+{'name':'The Barn at Rocky Fork Creek','y':40.046507549,'x':-82.85820305,'addr':'1370 E Johnstown Rd Gahanna OH 43230','url':'https://thebarncolumbus.com/','twitter':'CMRColumbus'},
+{'name':'The Cabinet Shop','y':40.147153784,'x':-82.99641883,'addr':'9075 Antares Ave Columbus OH 43240','url':'http://thecabshop.com','twitter':''},
+{'name':'The Crest','y':40.0089,'x':-83.002658,'addr':'2248 Indianola Ave Columbus OH 43201','url':'https://www.thecrestgastropub.com/','twitter':'TheCbusCrest'},
+{'name':'The Crest','y':39.951265125,'x':-82.98242556,'addr':'621 Parsons Ave Columbus OH 43206','url':'https://www.thecrestgastropub.com/','twitter':''},
+{'name':'The Daily Growler','y':40.030108134,'x':-83.09110195,'addr':'2812 Fishinger Rd Upper Arlington OH 43221','url':'http://www.thedailygrowler.com/','twitter':'mydailygrowler'},
+{'name':'The Daily Growler','y':40.158255861,'x':-83.08293233,'addr':'258 W Olentangy St Powell OH 43065','url':'http://www.thedailygrowler.com/','twitter':''},
+{'name':'The Daily Growler','y':39.947943895,'x':-82.99775489,'addr':'702 S High St Columbus OH 43206','url':'http://www.thedailygrowler.com/','twitter':''},
+{'name':'The Estate at New Albany','y':40.088818,'x':-82.791831,'addr':'5199 Forest Dr New Albany OH 43054','url':'http://www.theestatenewalbany.biz/?utm_source=theknot.com&utm_medium=referral&utm_campaign=theknot','twitter':''},
+{'name':'The Finer Things Event Planning','y':40.008522151,'x':-82.81651594,'addr':'1279 Stone Trail Dr Blacklick OH 43004','url':'http://thefinerthingseventplanning.com','twitter':'finerthingsoh'},
+{'name':'The Grandview Hop','y':39.977841,'x':-83.045329,'addr':'Grandview Ave Grandview Heights OH 43212','url':'https://grandviewhop.com/','twitter':'TheGrandviewHop'},
+{'name':'The Guild House','y':39.97514775,'x':-83.00314125,'addr':'624 N High St Columbus OH 43215','url':'https://www.theguildhousecolumbus.com/','twitter':'CMRColumbus'},
+{'name':'The Hills Market','y':40.125241047,'x':-83.03672042,'addr':'7860 Olentangy River Rd Columbus OH 43235','url':'http://www.thehillsmarket.com','twitter':'hillsmarket'},
+{'name':'The Hills Market','y':39.965377171,'x':-82.99145445,'addr':'95 N Grant Ave Columbus OH 43215','url':'http://www.thehillsmarket.com','twitter':''},
+{'name':'The Media Captain','y':39.987827004,'x':-83.00475424,'addr':'1245 Courtland Ave Columbus OH 43201','url':'https://www.themediacaptain.com/','twitter':'themediacaptain'},
+{'name':'The Olde Towne Tavern','y':39.962948071,'x':-82.97643879,'addr':'889 Oak St Columbus OH 43205','url':'http://www.theoldetownetavern.com/','twitter':'TavernOldeTowne'},
+{'name':'The Pearl','y':39.975519429,'x':-83.00321314,'addr':'641 N High St Columbus OH 43215','url':'http://www.thepearlcolumbus.com/','twitter':'CMRColumbus'},
+{'name':'The Perch','y':39.977009099,'x':-83.00213321,'addr':'45 E Lincoln St Columbus OH 43215','url':'http://theperchshortnorth.com/','twitter':'coworkcolumbus'},
+{'name':'The Roosevelt Coffeehouse','y':39.965876286,'x':-82.99302505,'addr':'300 E Long St Columbus OH 43215','url':'https://www.rooseveltcoffee.org','twitter':''},
+{'name':'The Walrus Kitchen & Public House','y':39.956691022,'x':-82.99467954,'addr':'143 E Main St Columbus OH 43215','url':'http://www.thewalruscolumbus.com/','twitter':'thewalruscbus'},
+{'name':'Three Sheets','y':39.95063575,'x':-82.9983975,'addr':'560 S High St Columbus OH 43215','url':'https://www.facebook.com/threesheetsbrewerydistrict/','twitter':''},
+{'name':'Threes Above High','y':40.007171,'x':-83.009661,'addr':'198 N High St Dublin OH 43017','url':'https://threesabovehigh.com','twitter':''},
+{'name':'Tiger systems Inc.','y':40.105080064,'x':-82.98381913,'addr':'963 W Schrock Rd Columbus OH 43229','url':'https://www.tsicolumbus.com/','twitter':'TigerSystemsOH'},
+{'name':'Title Boxing','y':39.702823163,'x':-84.12548545,'addr':'2120 E Dorothy Ln Kettering OH 45420','url':'https://titleboxingclub.com','twitter':''},
+{'name':'Title Boxing','y':40.157379,'x':-83.091498,'addr':'9798 Sawmill Pkwy Powell OH 43065','url':'https://titleboxingclub.com','twitter':''},
+{'name':'Title Boxing','y':40.053016343,'x':-83.04816158,'addr':'1134 W Henderson Rd Columbus OH 43220','url':'https://titleboxingclub.com','twitter':''},
+{'name':'Title Boxing','y':39.988154,'x':-83.031711,'addr':'955 W 5th Ave Columbus OH 43212','url':'https://titleboxingclub.com','twitter':'titleboxingclub'},
+{'name':'Title Boxing','y':40.141128606,'x':-82.99114012,'addr':'8727 Sancus Blvd Columbus OH 43240','url':'https://titleboxingclub.com','twitter':''},
+{'name':'Title Boxing','y':40.103963892,'x':-82.92025876,'addr':'131 Huber Village Blvd Westerville OH 43081','url':'https://titleboxingclub.com','twitter':''},
+{'name':'Title Boxing','y':39.91008,'x':-82.781208,'addr':'1010 Refugee Rd Pickerington OH 43147','url':'https://titleboxingclub.com','twitter':''},
+{'name':'Uptowne Flowers','y':40.089911,'x':-83.045567,'addr':'2050 W Dublin Granville Rd Columbus OH 43085','url':'www.uptowneflowers.com','twitter':'UptowneF'},
+{'name':'Velosio (Formerly Socius)','y':40.102872,'x':-83.144355,'addr':'5747 Perimeter Dr Dublin OH 43017','url':'https://www.velosio.com/','twitter':'velosio'},
+{'name':'Versa','y':39.974842223,'x':-83.05352399,'addr':'1201 Dublin Rd Columbus OH 43215','url':'http://versa.works/','twitter':'VersaWorkspace'},
+{'name':'WCBE-FM','y':39.972575,'x':-82.985817,'addr':'540 Jack Gibbs Blvd Columbus OH 43215','url':'http://www.wcbe.org/','twitter':'WCBE905Columbus'},
+{'name':'WD Partners','y':40.105692795,'x':-83.14999922,'addr':'7007 Discovery Blvd Dublin OH 43017','url':'http://www.wdpartners.com/','twitter':'WD_Partners'},
+{'name':'WSA Studio','y':39.941740361,'x':-82.99836282,'addr':'982 S Front St Columbus OH 43206','url':'http://www.wsastudio.com','twitter':'wsastudio'},
+{'name':'Weiland s Market','y':40.037674094,'x':-83.00059319,'addr':'3600 Indianola Ave Columbus OH 43214','url':'http://www.weilandsmarket.com/','twitter':'WeilandsMarket'},
+{'name':'White Castle','y':40.053052,'x':-83.049648,'addr':'4525 Kenny Rd Columbus OH 43220','url':'https://www.whitecastle.com','twitter':''},
+{'name':'White Castle','y':39.957213238,'x':-83.04194379,'addr':'1555 W Broad St Columbus OH 43222','url':'https://www.whitecastle.com','twitter':''},
+{'name':'White Castle','y':39.878573134,'x':-83.04048242,'addr':'1620 Stringtown Rd Grove City OH 43123','url':'https://www.whitecastle.com','twitter':''},
+{'name':'White Castle','y':40.166542,'x':-83.021397,'addr':'8698 Owenfield Dr Powell OH 43065','url':'https://www.whitecastle.com','twitter':''},
+{'name':'White Castle','y':39.974175,'x':-83.018229,'addr':'555 W Goodale St Columbus OH 43215','url':'https://www.whitecastle.com','twitter':'WhiteCastle'},
+{'name':'White Castle','y':39.888612,'x':-82.998012,'addr':'3615 S High St Columbus OH 43207','url':'https://www.whitecastle.com','twitter':''},
+{'name':'White Castle','y':39.939346161,'x':-82.99620996,'addr':'1111 S High St Columbus OH 43206','url':'https://www.whitecastle.com','twitter':''},
+{'name':'White Castle','y':39.986220186,'x':-82.98349467,'addr':'801 E 5th Ave Columbus OH 43201','url':'https://www.whitecastle.com','twitter':''},
+{'name':'White Castle','y':40.087340629,'x':-82.97959706,'addr':'1435 E Dublin Granville Rd Columbus OH 43229','url':'https://www.whitecastle.com','twitter':''},
+{'name':'White Castle','y':39.94725584,'x':-82.9450817,'addr':'1025 Alum Creek Dr Columbus OH 43209','url':'https://www.whitecastle.com','twitter':''},
+{'name':'White Castle','y':40.140440434,'x':-82.92804332,'addr':'648 N State St Westerville OH 43082','url':'https://www.whitecastle.com','twitter':''},
+{'name':'White Castle','y':39.933822,'x':-82.878906,'addr':'2024 S Hamilton Rd Columbus OH 43227','url':'https://www.whitecastle.com','twitter':''},
+{'name':'White Castle','y':39.954416,'x':-82.877023,'addr':'1080 S Hamilton Rd Whitehall OH 43227','url':'https://www.whitecastle.com','twitter':''},
+{'name':'White Castle','y':39.981644,'x':-82.823764,'addr':'6791 E Broad St Columbus OH 43213','url':'https://www.whitecastle.com','twitter':''},
+{'name':'Whitehall Dairy Queen','y':39.963065439,'x':-82.88569237,'addr':'549 S Yearling Rd Whitehall OH 43213','url':'','twitter':'DairyQueen'},
+{'name':'Wolf s Ridge Brewing','y':39.967381667,'x':-82.99714711,'addr':'215 N 4th St Columbus OH 43215','url':'http://www.wolfsridgebrewing.com','twitter':'WolfsRidgeBrew'},
+{'name':'Woodlands Tavern','y':39.984807125,'x':-83.03768588,'addr':'1200 W 3rd Ave Columbus OH 43212','url':'http://woodlandstavern.com/','twitter':'WoodlandsTavern'},
+{'name':'Xcelerate Media','y':40.099363105,'x':-83.11523142,'addr':'61 W Bridge St Dublin OH 43017','url':'http://www.xceleratemedia.com/website/index.html','twitter':'XcelerateMedia'},
+{'name':'Yats Cajun Creole','y':39.986019987,'x':-83.04467933,'addr':'1386 Grandview Ave Columbus OH 43212','url':'http://yatscajuncreole.com/wp/columbusoh/','twitter':''},
+{'name':'Yellowood Design Studio','y':39.834764401,'x':-82.80047361,'addr':'10935 Winchester Rd NW Canal Winchester OH 43110','url':'http://www.yellowoodesign.com','twitter':'yellowoodesign'},
+{'name':'Zacatecas Restaurant','y':39.942726333,'x':-83.09298774,'addr':'3528 Sullivant Ave Columbus OH 43204','url':'N/A','twitter':''},
+{'name':'Zappenin','y':40.065876375,'x':-82.50158727,'addr':'1075 Newark Granville Rd Granville OH 43023','url':'https://www.zappenin.com','twitter':'zappeninsocial'},
+{'name':'Zipline Logistics','y':39.989713,'x':-83.066983,'addr':'2300 W 5th Ave Marble Cliff OH 43215','url':'https://ziplinelogistics.com/','twitter':'ZiplineLogistic'},
+{'name':'ZoCo Design','y':39.983812884,'x':-83.04485405,'addr':'1269 Grandview Ave Grandview Heights OH 43212','url':'https://www.zocodesign.com','twitter':'zoco_design'},
+{'name':'grain + grape','y':39.956831711,'x':-82.92434223,'addr':'2780 E Main St Columbus OH 43209','url':'http://www.grain-grape.net','twitter':'grain_grape'},
+{'name':'The Exception Hair Studio','y':39.9041057,'x':-83.4309614,'addr':'289 Lafayette St Suit N London OH 43140','url':'https://www.facebook.com/theexceptionhairstudio/','twitter':'ExceptionHair'}
+					];
+					var map;
+					function initMap() {
+						map = new google.maps.Map(document.getElementById('map'), {
+							center: {lat: 39.99, lng: -83.007202},
+							zoom: 10,
+							styles: [
+			{
+				"elementType": "geometry",
+				"stylers": [
+					{
+						"color": "#f5f5f5"
+					}
+				]
+			},
+			{
+				"elementType": "labels.icon",
+				"stylers": [
+					{
+						"visibility": "off"
+					}
+				]
+			},
+			{
+				"elementType": "labels.text.fill",
+				"stylers": [
+					{
+						"color": "#616161"
+					}
+				]
+			},
+			{
+				"elementType": "labels.text.stroke",
+				"stylers": [
+					{
+						"color": "#f5f5f5"
+					}
+				]
+			},
+			{
+				"featureType": "administrative.land_parcel",
+				"elementType": "labels.text.fill",
+				"stylers": [
+					{
+						"color": "#bdbdbd"
+					}
+				]
+			},
+			{
+				"featureType": "poi",
+				"elementType": "geometry",
+				"stylers": [
+					{
+						"color": "#eeeeee"
+					}
+				]
+			},
+			{
+				"featureType": "poi",
+				"elementType": "labels.text.fill",
+				"stylers": [
+					{
+						"color": "#757575"
+					}
+				]
+			},
+			{
+				"featureType": "poi.park",
+				"elementType": "geometry",
+				"stylers": [
+					{
+						"color": "#e5e5e5"
+					}
+				]
+			},
+			{
+				"featureType": "poi.park",
+				"elementType": "labels.text.fill",
+				"stylers": [
+					{
+						"color": "#9e9e9e"
+					}
+				]
+			},
+			{
+				"featureType": "road",
+				"elementType": "geometry",
+				"stylers": [
+					{
+						"color": "#ffffff"
+					}
+				]
+			},
+			{
+				"featureType": "road.arterial",
+				"elementType": "labels.text.fill",
+				"stylers": [
+					{
+						"color": "#757575"
+					}
+				]
+			},
+			{
+				"featureType": "road.highway",
+				"elementType": "geometry",
+				"stylers": [
+					{
+						"color": "#dadada"
+					}
+				]
+			},
+			{
+				"featureType": "road.highway",
+				"elementType": "labels.text.fill",
+				"stylers": [
+					{
+						"color": "#616161"
+					}
+				]
+			},
+			{
+				"featureType": "road.local",
+				"elementType": "labels.text.fill",
+				"stylers": [
+					{
+						"color": "#9e9e9e"
+					}
+				]
+			},
+			{
+				"featureType": "transit.line",
+				"elementType": "geometry",
+				"stylers": [
+					{
+						"color": "#e5e5e5"
+					}
+				]
+			},
+			{
+				"featureType": "transit.station",
+				"elementType": "geometry",
+				"stylers": [
+					{
+						"color": "#eeeeee"
+					}
+				]
+			},
+			{
+				"featureType": "water",
+				"elementType": "geometry",
+				"stylers": [
+					{
+						"color": "#c9c9c9"
+					}
+				]
+			},
+			{
+				"featureType": "water",
+				"elementType": "labels.text.fill",
+				"stylers": [
+					{
+						"color": "#9e9e9e"
+					}
+				]
+			}
+		],
+							streetViewControl: false,
+							mapTypeControl: false,
+							fullscreenControlOptions: {
+								position: google.maps.ControlPosition.LEFT_BOTTOM
+							}
+						});
+
+						var image = 'images/ui/pin.svg';
+
+						var p = 0; var openwindow,markers=[];
+						function laypins(){
+							if(p<latlongs.length){
+								var contentString = '<div class="iw">';
+								contentString += '<p style="font-weight:bold;">'+latlongs[p].name+'</p>';
+								contentString += '<p>'+latlongs[p].addr+'</p>';
+								contentString += '<p><a style="color:black;" href="'+latlongs[p].url+'" target="_blank">'+latlongs[p].url+'</a></p>';
+								if(latlongs[p].twitter.length>0) contentString += '<p><a style="color:black;" href="https://twitter.com/'+latlongs[p].twitter+'" target="_blank">@'+latlongs[p].twitter+'</a></p>';
+								contentString += '</div>';
+								var infowindow = new google.maps.InfoWindow({ content: contentString });
+								var marker = new google.maps.Marker({
+									position: {lat: +latlongs[p].y, lng: +latlongs[p].x},
+									//animation: google.maps.Animation.DROP,
+									map: map,
+									icon: image,
+									title: latlongs[p].name,
+									clicked: false
+								});
+								markers.push(marker);
+
+								marker.addListener('click', function() {
+									if(!this.clicked) this.clicked = true; 
+									if(openwindow) openwindow.close();
+									openwindow = infowindow.open(map, marker);
+
+									google.maps.event.addListener(infowindow, 'closeclick', function() {  
+										for(m in markers){ markers[m].clicked=false;}
+									}); 
+								});
+								marker.addListener('mouseover', function() {
+									if($(window).width()>700){
+									if(openwindow) openwindow.close();
+									openwindow = infowindow.open(map, marker);
+									}
+								});
+								marker.addListener('mouseout', function() {
+									if($(window).width()>700){
+									if(!this.clicked) infowindow.close();
+									}
+								});
+								p++;
+
+								//setTimeout(function(){ laypins(); }, 30);
+								laypins();
+							}
+						}
+						laypins();
+
+					}
+				</script>
+				<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4c0vD6ZJ6I_JHoSkz-tt0eqbwlCU8kXA&callback=initMap"></script>
+
+				<style>
+					a.noteLink{
+						color: black;
+						text-decoration: none;
+					}
+					a.noteLink:hover{
+						text-decoration: underline;
+					}
+					div.input-note{
+  					float: left; font-size: 12px;
+  					margin: 15px 0 0 0;
+  					width: 80%; padding: 0 10%;
+  					text-align: center;
+					}
+				</style>
+				<div id='map'></div>
+				<div class='input-note euro'><i><a class="noteLink" href="mailto:team@savethecrew.com?Subject=Ally Map Suggestion" target="_top">Report inaccurate marker</a></i></div>
+			</div>
+			</div>
+			
+		</div>
+		
+		<footer class='nFooter fc box-shadow-up'>
+			<div class='container fsb'>
+				
+				<div class='footer-col' style='order:2;-webkit-order:2;'>
+					<a class='footer-col-title'>Pages</a>
+					<a href='allies.html' class='footer-col-item'>Allies</a>
+					<a href='map.html' class='footer-col-item'>Ally Map</a>
+					<a href='#' class='footer-col-item'>Blog</a>
+					<a href='index.html' class='footer-col-item'>Home</a>
+					<a href='kit.html' class='footer-col-item'>Kit</a>
+					<a href='organizers.html' class='footer-col-item'>Organizers</a>
+					<a href='privacy.html' class='footer-col-item'>Privacy</a>
+					<a href='stadium.html' class='footer-col-item'>Stadium</a>
+					<a href='groups.html' class='footer-col-item'>Supporter Groups</a>
+					
+				</div>
+			
+				<div class='footer-logo-area'>
+					<img class='footer-logo' src='images/logos_tm/stc-secondary-badge-tm.png'>
+					<!--<div class='signature euro'>Built by <a href='https://twitter.com/tomuky' target='_new'>Tom</a> for Columbus</div>-->
+				</div>
+				
+				<div class='footer-col' style='order:4;-webkit-order:4;'>
+					<a class='footer-col-title'>Contact</a>
+					<a href='mailto:team@savethecrew.com' class='footer-col-item'>Team@SaveTheCrew.com</a>
+					<a href='mailto:business@savethecrew.com' class='footer-col-item'>Business@SaveTheCrew.com</a>
+					<a href='mailto:media@savethecrew.com' class='footer-col-item'>Media@SaveTheCrew.com</a>
+					<a href='https://twitter.com/save_the_crew' target='_blank' class='footer-col-item'>Twitter.com/save_the_crew</a>
+					<a href='https://facebook.com/savethecrew' target='_blank' class='footer-col-item'>Facebook.com/SaveTheCrew</a>
+					<a href='https://www.instagram.com/savethecrew/' target='_blank' class='footer-col-item'>Instagram.com/SaveTheCrew</a>
+				</div>
+				
+			</div>
+		</footer>
+		
+	</body>
+</html>

@@ -1,0 +1,731 @@
+<html>
+	<head>
+		<title>STC - Allies</title>
+		
+    <meta property="og:title"           content="Save The Crew - Allies" />
+    <meta property="og:description"     content="Business Allies of #SaveTheCrew. Become one today!" />
+		<meta property="og:url"             content="https://savethecrew.com/" />
+		<meta property="og:image"           content="https://savethecrew.com/images/fb_cover.png" />
+		<meta property="og:image:width"			content="1000px" />
+    <meta property="og:image:height"		content="505px" />
+    <meta name="twitter:title" 					content="Save The Crew - Allies">
+    <meta name="twitter:description" 		content="Business Allies of #SaveTheCrew. Become one today!" />
+		<meta name="twitter:card" 					content="summary">
+    <meta name="twitter:image" 					content="https://savethecrew.com/images/twitter_url.png" />
+		
+    <link rel="stylesheet" href="css/white_v1.4.1.css" />
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/> 
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="images/favicons/manifest.json">
+    <link rel="mask-icon" href="images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="images/favicons/favicon.ico">
+    <meta name="msapplication-config" content="/images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700|PT+Sans" rel="stylesheet">
+		
+	</head>
+	<body>
+		
+		 
+		
+		<script> var headerChange;
+    $(document).on('click','.toggleMenu',function(){
+			$('nav').animate({width:'toggle'},'fast');
+		}).ready(function(){
+
+			window.onscroll = function(){headerChange()}; var scrolled=false;
+
+			headerChange = function (){
+				if(document.body.scrollTop > $('header').height() && $(window).width()>900 && !scrolled){
+					scrolled=true;
+					$('.nHeader').animate({'height':60},'fast');
+					$('.top').animate({'height':60},'fast');
+					$('.logo-primary').animate({'height':40,'margin':10},'fast');
+					$('.logo-words').animate({'height':20,'margin':20},'fast');
+					$('.hamburger').animate({'height':20,'padding':20},'fast');
+				}else if(document.body.scrollTop < $('header').height() && $(window).width()>900 && scrolled){
+					scrolled=false;
+					$('.nHeader').animate({'height':100},'fast');
+					$('.top').animate({'height':100},'fast');
+					$('.logo-primary').animate({'height':80,'margin':10},'fast');
+					$('.logo-words').animate({'height':40,'margin':30},'fast');
+					$('.hamburger').animate({'height':36,'padding-top':32,'padding-right':20,'padding-bottom':32,'padding-left':20},'fast');
+				}
+			}
+		});</script>
+		
+		<nav class='sider box-shadow-left'>
+			<a class='toggleMenu'>X</a>
+			<a href='index.html'>Home</a>
+			<a href='stadium.html'>Stadium</a>
+			<a href='groups.html'>Supporter Groups</a>
+			<a href='kit.html'>Kit</a>
+			<a href='allies.html'>Allies</a>
+			<a href='map.html'>Ally Map</a>
+			
+			<a href='organizers.html'>Organizers</a>
+		</nav>
+		
+		<header class='nHeader fc box-shadow-down'>
+			<div class='container-wide'>
+				<div class='top fsb'>
+					<a href='index.html' class='desk'><img src='images/logos_tm/stc_primary_logo_tm.png' class='logo-primary'></a>
+					<a href='index.html'><img src='images/logos_tm/stc_words_tm.png' class='logo-words'></a>
+					<a><img src='images/ui/hamburger.png' class='hamburger toggleMenu'></a>
+				</div>
+			</div>
+		</header>
+		
+		<div class='header-filler'></div>
+		
+		<style>
+			.black-dropdown-area{
+				font-size: 14px; background-color: black; color: white; padding: 0 9px;
+				cursor: pointer;  position: relative; margin: 4px; min-width: 104px; text-align: center;
+			}
+			.black-dropdown-label{
+				color: white; padding: 4px 9px; font-size: 14px;
+			}
+			.black-dropdown-list{
+				display: none; position: absolute; left: 0; top: 26px; z-index: 2;
+			}
+			a.black-dropdown-option{
+				background-color: black; padding: 4px 9px; position: relative; display: block; text-decoration: none; color: white;
+			}
+			a.black-dropdown-option:hover{
+				background-color: rgba(55,55,55,1);
+			}
+			
+			.ally-card{
+				width: 140px; margin: 10px; padding: 10px;
+			}
+			.ally-card-img-area{
+				width: 140px; height: 140px; position: relative; margin-bottom: 10px;
+			}
+			.ally-card-img{
+				max-width: 100%; max-height: 100%; margin:auto;
+				position:absolute; top:0; bottom:0; left: 0; right:0;
+			}
+			.ally-accolades-area{
+				width: 140px; height: 40px; border-top: 1px solid rgba(10,10,10,.1); padding: 10px 0 0 0;
+			}
+			.ally-accolade{
+				height: 42px; width: 35px;
+			}
+			.ally-accolade-img{
+				width: 100%; height: auto;
+			}
+			.ally-ribbon{
+				position: absolute; width: 168px;  left: -14px;
+			}
+			@media screen and (min-width:10px) and (max-width:415px){
+				.black-dropdown-area{ margin: 4px; }
+			}
+			@media screen and (min-width:10px) and (max-width:360px){
+				.ally-card{ width: 120px; margin: 8px; }
+				.ally-card-img-area{ width: 120px; height: 120px; margin-bottom: 8px; }
+				.ally-accolades-area{ width: 120px; height: 30px; }
+				.ally-accolade{ width: 30px; height: 30px; }
+				.ally-ribbon{ width: 148px;  left: -14px; }
+				
+			}
+			li{ text-align: left; }
+			img.list-icon{ height: 22px; margin: 3px 3px -4px 0; display: inline;}
+			img.list-icon-2{ height: 28px; margin: 5px 3px -8px 0; display: inline;}
+			a.read-more{
+				text-align: center; cursor: pointer; text-decoration: none;
+				color: dimgrey; font-style: italic; display: block; width: 100%;
+			}
+			a.read-more:hover{
+				text-decoration: underline;
+			}
+			.quick-key-area{
+				width: 100%;
+			}
+			.quick-key{
+				width: 240px;
+			}
+			ul{ padding: 0; margin: 15px 0;}
+			.black-input-area{ margin: 4px; }
+			.black-input-label{ height: 27px; line-height: 27px; font-size: 14px; color: white; background-color: black; float: left; padding: 0 8px; }
+			input.black-input{ border-radius: 0; padding: 0; margin: 0; height: 27px; font-size: 16px; line-height: 27px; float: left; border: 2px solid black; padding: 0 8px; width: 120px; }
+		</style>
+		
+		<div class='area fc'>
+			
+			<div class='container'>
+				
+				<div class='area-title goth'>Business Allies</div>
+				<div class='area-subtitle euro quick-take'>
+					A business ally is a company that pledges support to our movement to keep Columbus Crew SC in Columbus.
+					<div class='quick-key-area fc'>
+						<div class='quick-key'>
+							<ul type='none'>
+								<li><img class='list-icon-2' src='images/allies/ui/Biz Allies_In Kind Badge.svg'>In-Kind Support</li>
+								<li><img class='list-icon-2' src='images/allies/ui/Biz Allies_Ticket Pledge Badge.svg'>Project 2019 Ticket Pledge</li>
+								<li><img class='list-icon-2' src='images/allies/ui/Biz Allies_Monetary Lvl 1 Badge.svg'>Financial: Up to $250</li>
+								<li><img class='list-icon-2' src='images/allies/ui/Biz Allies_Monetary Lvl 2 Badge.svg'>Financial: $250 to $1,000</li>
+								<li><img class='list-icon-2' src='images/allies/ui/Biz Allies_Monetary Lvl 3 Badge.svg'>Financial: Over $1,000</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class='area-subtitle euro full-take' style="display:none;">
+					<p>A business ally is a company that pledges support to our movement to keep Columbus Crew SC in Columbus, recognizing that the team adds a lot of value to the city. Beyond pledging their support, allies have contributed in a variety of other ways. We’ve created a series of symbols that recognize the different steps some of our allies have taken to Save The Crew.</p>  
+					<ol>
+						<li><b>Financial Support</b> – The $ symbol recognizes business allies that have contributed funds to the Save The Crew (STC) movement. The color and size of the $ symbol represents the amount of funds contributed, according to the guide below:</li>
+						<ul type='none'>
+							<li><img class='list-icon' src='images/allies/ui/Biz Allies_Monetary Lvl 1 Badge.svg'>Up to $250</li>
+							<li><img class='list-icon' src='images/allies/ui/Biz Allies_Monetary Lvl 2 Badge.svg'>$250 to $1,000</li>
+							<li><img class='list-icon' src='images/allies/ui/Biz Allies_Monetary Lvl 3 Badge.svg'>Over $1,000</li>
+						</ul>
+						<li><b>In-Kind Support</b> <img class='list-icon' src='images/allies/ui/Biz Allies_In Kind Badge.svg'> – The Gift symbol recognizes business allies that have contributed in-kind donations to the movement. These includes items such as event space, marketing assistance, free materials and services, etc.</li>
+						<li><b>Project 2019 Ticket Pledge</b> <img class='list-icon' src='images/allies/ui/Biz Allies_Ticket Pledge Badge.svg'> – The Ticket symbol recognizes business allies that have pledged to purchase season tickets or a multiple match plan for the 2019 Columbus Crew SC season, in the case that Columbus Crew SC is sold to a local investor/operator.</li>
+						<li><b>Community Kit Sponsors</b> – Both Compton Construction and Safelite AutoGlass get special recognition with the Jersey symbol as sponsors of The Community Kit.</li>
+					</ol>   
+				</div>
+				<a class='read-more euro'>Expand for more info</a>
+				
+				<script>
+					$(document).on('mouseup','.read-more',function(){
+						$('.quick-take').slideUp(); $('.read-more').slideUp();
+						$('.full-take').slideDown();
+					});
+				</script>
+				
+				<!--<div class='black-button-area fc euro'>
+					<a class='black-button' href='http://bit.ly/STCBizForm' target="_blank">Become an ally</a>
+				</div>-->
+				
+				<div class='black-button-area fc euro'>
+					
+					<div class='black-dropdown-area'>
+						<div class='black-dropdown-label' id='category-label'>Category</div>
+						<div class='black-dropdown-list box-shadow'>
+							<a class='black-dropdown-option' onclick="catAllies('')">All</a>
+							<a class='black-dropdown-option' onclick="catAllies('Construction/Manufacturing')">Construction/Manufacturing</a>
+							<a class='black-dropdown-option' onclick="catAllies('Entertainment')">Entertainment</a>
+							<a class='black-dropdown-option' onclick="catAllies('Food & Bevs')">Food & Bevs</a>
+							<a class='black-dropdown-option' onclick="catAllies('Healthcare')">Healthcare</a>
+							<a class='black-dropdown-option' onclick="catAllies('Professional Services')">Professional Services</a>
+							<a class='black-dropdown-option' onclick="catAllies('Retail')">Retail</a>
+							<a class='black-dropdown-option' onclick="catAllies('Other')">Other</a>
+						</div>
+					</div>
+					
+					<a class='black-button-small' onclick="sortAllies('Name','asc')" style="margin: 4px; width: 104px; ">Alphabetically</a>
+					
+					<a class='black-button-small' onclick="sortAllies('TPR','asc')" style="margin: 4px; width: 104px;">Featured</a>
+					
+					<div class='black-input-area'>
+						<div class='black-input-label euro'>Search:</div>
+						<input class='black-input euro' id='search-text'>
+					</div>
+							
+				</div>
+			</div>
+			
+			<script>
+				var allies = [
+					{'Name':'2nd Skull','Logo':'2ndSkull_logo_black_200x200.png','URL':'http://www.2ndskull.com','Category':'Retail','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':9999},
+{'Name':'30xi LLC','Logo':'30xi_logo_white.png','URL':'https://30xi.com','Category':'Professional Services','Fin':'','InKind':'X','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':215},
+{'Name':'614 Media Group','Logo':'614Now_logo_white.png','URL':'http://614now.com/','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':193},
+{'Name':'801 creative','Logo':'801_logo_bw_200x200-01.png','URL':'http://www.801creative.com','Category':'Professional Services','Fin':'','InKind':'X','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':9999},
+{'Name':'Acre','Logo':'acre.png','URL':'https://www.acretogo.com/','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':69},
+//{'Name':'Actual Brewing Co','Logo':'actual brewing co_logo_white.png','URL':'https://www.actualbrewing.com/','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':220},
+{'Name':'Acura Columbus ','Logo':'acura-columbus_logo_black.png','URL':'https://www.acuracolumbus.com/','Category':'Retail','Fin':'','InKind':'X','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':true,'TPR':26},
+{'Name':'AEP Energy','Logo':'aep-energy.png','URL':'https://www.aepenergy.com/','Category':'Construction/Manufacturing','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':true,'TPR':10},
+{'Name':'Ahlum & Arbor Tree Preservation','Logo':'ahlum & arbor_logo_white.png','URL':'http://www.ahlumarbor.com','Category':'Professional Services','Fin':'','InKind':'','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':222},
+{'Name':'Aladdins Eatery','Logo':'Aladdins_logo_white.png','URL':'https://www.aladdinseatery.com/','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':86},
+{'Name':'Alchemy Grandview','Logo':'alchemy_logo_black_200x200-01.png','URL':'https://www.alchemyjuicecafe.com/','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':9999},
+{'Name':'Ale Wine & Spirits of Powell','Logo':'alewinespirits.png','URL':'http://alewineandspirits.com/','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':70},
+{'Name':'Alison Rose Screen Printing ','Logo':'AlisonRose_logo_white.png','URL':'https://alisonrose.com','Category':'Retail','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':128},
+{'Name':'Aquatic Adventures Ohio','Logo':'AquaticAdventures_logo_white.png','URL':'https://www.aaoscuba.com/','Category':'Entertainment','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':142},
+{'Name':'Arepazo','Logo':'Arepazo_logo_white.png','URL':'http://www.elarepazolatingrill.com','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':107},
+{'Name':'Artius Man','Logo':'AtriusManLogo_WhiteTrans_H_300dpi.png','URL':'https://www.artiusman.com','Category':'Retail','Fin':'','InKind':'X','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':137},
+{'Name':'Atlas Butler Heating and Cooling','Logo':'atlas butler_logo_white.png','URL':'http://atlasbutler.com/','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':25},
+{'Name':'Average Joes Pub & Grill','Logo':'Average Joes_logo_white.png','URL':'http://www.averagejoespub.com','Category':'Food & Bevs','Fin':'','InKind':'X','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':30},
+{'Name':'Awkward Dog Media LLC','Logo':'columbus something new_logo_white.png','URL':'http://www.columbussomethingnew.com/awkward-dog-media-llc/','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':223},
+{'Name':'B-Wear Sportswear','Logo':'bwear_logo_white.png','URL':'http://www.bwearsportswear.com','Category':'Retail','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':165},
+{'Name':'Bake Me Happy','Logo':'bake me happy_logo_black.png','URL':'http://www.bakemehappygf.com','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':true,'TPR':240},
+{'Name':'Baker Design Co.','Logo':'bakerdesignco.png','URL':'https://bakerdesign.co/','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':67},
+{'Name':'Balboa','Logo':'Balboa_logo_white.png','URL':'http://www.balboagrandview.com/','Category':'Food & Bevs','Fin':'','InKind':'X','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':153},
+{'Name':'Bark & Board Design','Logo':'bark _ board_logo_white.png','URL':'https://www.etsy.com/shop/barkandboarddesignco','Category':'Professional Services','Fin':'','InKind':'','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':238},
+{'Name':'Barrel On High','Logo':'barrel on high_logo_black.png','URL':'http://www.barrelonhigh.com','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':true,'TPR':242},
+{'Name':'bartha','Logo':'BarthaLogo_black-01.png','URL':'http://www.bartha.com/','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':9999},
+{'Name':'BBCO Design','Logo':'bbcodesign.png','URL':'BBCODESIGN.COM','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':51},
+{'Name':'Bellacinos Pizza & Grinders','Logo':'Bellacinos_Pizza _ Grinders_BLK.png','URL':'http://bellacinoscolumbus.com/','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':9999},
+{'Name':'Benefactor Group','Logo':'Benefactor_logo_white.png','URL':'https://benefactorgroup.com/','Category':'Professional Services','Fin':'','InKind':'','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':154},
+{'Name':'Big Mammas Burritos','Logo':'BigMammasBurritos_White.png','URL':'http://bigmammasburritos.com/','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':87},
+{'Name':'BLC Images','Logo':'BLC-Images_logo_black.png','URL':'http://www.blcimages.com','Category':'Professional Services','Fin':'','InKind':'','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':true,'TPR':242},
+{'Name':'Bliss Consulting Firm','Logo':'BlissConsultingFirm_logo_black.png','URL':'http://www.blissconsultingfirm.com/','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':true,'TPR':243},
+{'Name':'Blockfort Columbus','Logo':'BlockFort_logo_white.png','URL':'http://www.blockfortcolumbus.com ','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':107},
+{'Name':'Blue Label Digital Printing','Logo':'blue label_logo_white.png','URL':'http://www.bluelabeldigital.com','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':191},
+{'Name':'Blystone Farm','Logo':'blystone-farm_light2.png','URL':'https://blystonefarm.com/','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':138},
+{'Name':'Bored Leisure Co.','Logo':'BoredLeisure_logo_black-01.png','URL':'https://bored-leisure-co.myshopify.com/products/xybrid-the-monster-building-transparent-card-game','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':true,'TPR':244},
+{'Name':'BrewDog Brewing Co','Logo':'BrewDog_logo_white.png','URL':'https://www.brewdog.com','Category':'Food & Bevs','Fin':'$250 to $1000','InKind':'X','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':3},
+{'Name':'Bricker & Eckler LLP','Logo':'Bricker _ Eckler_Logo_BW.png','URL':'http://www.bricker.com','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':9999},
+{'Name':'Brioso Coffee','Logo':'brioso coffee_logo_white.png','URL':'http://www.briosocoffee.com/','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':225},
+{'Name':'Bullseye Media LLC','Logo':'bullseye media_logo_light.png','URL':'http://thebullseyemedia.com','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':188},
+{'Name':'Burgess Window Repair','Logo':'BurgessWindow Repair_logo_black_200x200.png','URL':'http://burgesswindowrepair.com/','Category':'Professional Services','Fin':'','InKind':'','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':true,'TPR':9999},
+{'Name':'Bus Appetit Bun Truck','Logo':'BusAppetit_White-01.png','URL':'https://www.busappetit.com','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':29},
+{'Name':'Cameron Mitchell Restaurants','Logo':'CameronMitchell_logo_white.png','URL':'http://cameronmitchell.com/','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':39},
+{'Name':'Camerons American Bistro','Logo':'cameronmitchell_camerons.png','URL':'https://www.cameronsamericanbistro.com','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':35},
+{'Name':'Cap City Fine Diner and Bar','Logo':'cameronmitchell_cappcity.png','URL':'https://capcityfinediner.com/','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':36},
+{'Name':'Carenection','Logo':'carenection_logo_white.png','URL':'https://www.carenection.com','Category':'Healthcare','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':198},
+{'Name':'CareWorks Tech','Logo':'CareWorksTech_RGB_Black.png','URL':'https://www.careworkstech.com/','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':9999},
+{'Name':'Caskey Dry Cleaning','Logo':'caskey_logo_white.png','URL':'http://www.caskeycleaners.com','Category':'Professional Services','Fin':'','InKind':'','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':165},
+{'Name':'Cedar Grove Lodging & Event Lodge','Logo':'cedar grove lodging_logo_white.png','URL':'http://www.CedarGroveLodging.com','Category':'Other','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':213},
+{'Name':'Chelsea Borough Home','Logo':'CBH logo_light.png','URL':'http://www.facebook.com/ChelseaBoroughHome','Category':'Professional Services','Fin':'','InKind':'','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':125},
+{'Name':'Chodosh & Chodosh - Attorneys at Law','Logo':'chodish_logo_black_200x200.png','URL':'http://ChodoshLawOffice.com','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':9999},
+{'Name':'Chwalik FC','Logo':'ChwalikFC_logo_black-01.png','URL':'https://www.youtube.com/channel/UC2k-0w4CorYHaZpar3V6_Dw','Category':'Entertainment','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':true,'TPR':245},
+{'Name':'Citadel Cafe','Logo':'citadel_logo_white.png','URL':'http://www.citadelcafehilliard.com/','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':180},
+{'Name':'City Barbecue','Logo':'CityBBQ_Stacked_2Color_RGB_white-01.png','URL':'https://www.citybbq.com/','Category':'Food & Bevs','Fin':'','InKind':'X','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':15},
+{'Name':'CityPulse Columbus','Logo':'CityPulse_logo_white.png','URL':'https://citypulsecolumbus.com/','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':198},
+{'Name':'Columbus Brewing Co','Logo':'ColumbusBrewing_logo_white.png','URL':'https://www.columbusbrewing.com','Category':'Food & Bevs','Fin':'','InKind':'X','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':129},
+{'Name':'Columbus Eagles FC, LLC','Logo':'columbus eagles_logo_white.png','URL':'http://www.columbuseaglesfc.com/wp/','Category':'Entertainment','Fin':'','InKind':'X','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':200},
+{'Name':'Columbus Futsal','Logo':'ColumbusFutsal_logo_white.png','URL':'http://www.usyouthfutsal.com/columbusfutsalleague/','Category':'Entertainment','Fin':'< $250','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':52},
+{'Name':'Columbus Inspires','Logo':'Columbus Inspires Logo_white.png','URL':'https://columbusinspires.org/','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':194},
+{'Name':'Columbus Premier Soccer League','Logo':'CPSL_logo_white.png','URL':'http://www.columbuspremierleague.com','Category':'Entertainment','Fin':'','InKind':'','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':101},
+{'Name':'Columbus Running Company','Logo':'CRC logo_white.png','URL':'https://www.columbusrunning.com','Category':'Entertainment','Fin':'','InKind':'X','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':22},
+{'Name':'Columbus Sign Company','Logo':'CBUSsign_logo_white.png','URL':'http://www.columbussign.com','Category':'Professional Services','Fin':'','InKind':'X','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':143},
+{'Name':'Columbus Young Professionals Club','Logo':'CYP Club_logo_white.png','URL':'http://www.cypclub.com','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':202},
+{'Name':'Columbus YP Week','Logo':'columbus YP week_logo_white.png','URL':'https://columbusypweek2017.sched.com/','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':200},
+{'Name':'Combustion Brewery & Taproom','Logo':'CombustionBrewing_logo_white.png','URL':'http://www.combustionbrewing.com','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':144},
+{'Name':'Compton Construction','Logo':'compton_logo_white.png','URL':'http://comptonllc.com/','Category':'Construction/Manufacturing','Fin':'$1000 <','InKind':'','Tix':'X','Crew_Spon':'','Kit_Spon':'X','Black':false,'TPR':1},
+{'Name':'Corner Stone Craft Beer & Wine','Logo':'cornerstone.png','URL':'http://www.cornerstonecolumbus.com/','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':72},
+{'Name':'CornerSmiths ','Logo':'cornersmiths.png','URL':'https://www.facebook.com/CornerSmiths-176526355775492/','Category':'Retail','Fin':'','InKind':'','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':72},
+{'Name':'Corporate Housing Systems, Inc.','Logo':'corporate-housing-systems_white-01.png','URL':'http://www.corporatehousingsystems.com/','Category':'Professional Services','Fin':'','InKind':'','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':139},
+{'Name':'CoverMyMeds','Logo':'CoverMyMeds_White.png','URL':'https://www.covermymeds.com','Category':'Healthcare','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':5},
+{'Name':'Creative Art Bar','Logo':'CreativeArtBar_logo_black-01.png','URL':'https://www.creativeartbar.com','Category':'Entertainment','Fin':'< $250','InKind':'','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':true,'TPR':246},
+{'Name':'Creative Mobile Interiors','Logo':'CreativMobilInteriors_logo.png','URL':'http://www.creativemobileinteriors.com/','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':108},
+{'Name':'Creative Vacations','Logo':'creative-vacations_logo_black_200x200-01.png','URL':'http://www.creativevacations.com','Category':'Professional Service','Fin':'','InKind':'','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':9999},
+{'Name':'CrossChx','Logo':'CrossChx_logo_white.png','URL':'https://crosschx.com','Category':'Healthcare','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':24},
+{'Name':'Customized Girl','Logo':'customized girl_logo_white-01.png','URL':'https://www.customizedgirl.com','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':226},
+{'Name':'Das KaffeeHaus von Frau Burkhart','Logo':'DasKaffeehaus_logo_white.png','URL':'http://www.daskaffeehaus.us','Category':'Food & Bevs','Fin':'< $250','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':109},
+{'Name':'Dawson & Associates, LLC','Logo':'dawson_logo_black_200x200.png','URL':'https://www.dawsonlawllc.com','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':9999},
+{'Name':'Dayton Amateur Soccer League','Logo':'DASL-logo_white.png','URL':'http://www.soasa.com/page/show/3571140-dasl-2017-18-','Category':'Entertainment','Fin':'','InKind':'','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':131},
+{'Name':'Designed Evolution','Logo':'DesignedEvolution_logo_white.png','URL':'http://designedevolution.com','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':145},
+{'Name':'Dew Drop Flower Shoppe ','Logo':'dew-drop-flower-shoppe_logo_black-01.png','URL':'https://www.dewdropflowershoppe.com','Category':'Retail','Fin':'','InKind':'','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':true,'TPR':271},
+{'Name':'Dirty Franks','Logo':'dirty_franks_logo_white.png','URL':'http://dirtyfrankscolumbus.com/','Category':'Food & Bevs','Fin':'< $250','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':166},
+{'Name':'Doggie Day Spa','Logo':'doggiedayspa_logo_white.png','URL':'http://www.doggiedayspacolumbus.com','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':237},
+{'Name':'Donatos Pizza','Logo':'Donatos_White.png','URL':'https://www.donatos.com/','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':6},
+{'Name':'DSW','Logo':'dsw.png','URL':'https://www.dsw.com/en/us/','Category':'Retail','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':true,'TPR':7},
+{'Name':'Dublin Food Pantry','Logo':'DublinFoodPantry_logo_white.png','URL':'http://www.dublinfoodpantry.org','Category':'Other','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':206},
+{'Name':'Dublin Soccer League','Logo':'DublinSoccerLeague_logo_white.png','URL':'http://www.dublinsoccer.net/','Category':'Entertainment','Fin':'','InKind':'','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':132},
+{'Name':'Dublin Village Tavern','Logo':'DublinVillageTavern_logo_black-01.png','URL':'http://www.thedublinvillagetavern.com','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':true,'TPR':247},
+{'Name':'Duck Donuts ','Logo':'duckdonuts.png','URL':'https://www.duckdonuts.com/','Category':'Food & Bevs','Fin':'','InKind':'X','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':66},
+{'Name':'Eddys Chicken and Waffles','Logo':'eddys.png','URL':'https://eddyschickenandwaffles.com','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':31},
+{'Name':'Elevator Brewing Company','Logo':'ElevatorBrewing_logo_white.png','URL':'http://www.elevatorbrewery.com','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':133},
+{'Name':'Endeavor Brewing Company','Logo':'Endeavor_logo_white.png','URL':'https://endeavorbrewingco.com/','Category':'Food & Bevs','Fin':'< $250','InKind':'X','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':53},
+{'Name':'Equitas Health','Logo':'equitas health_logo_white.png','URL':'http://www.equitashealth.com','Category':'Healthcare','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':208},
+{'Name':'Ethyl & Tank','Logo':'ethyl_tank_logo_black_200x200-01.png','URL':'https://www.ethylandtank.com/','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':9999},
+{'Name':'Evolved Body Art','Logo':'evolved.jpg','URL':'http://www.evolvedbodyart.com','Category':'Retail','Fin':'','InKind':'','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':9999},
+{'Name':'Eye Columbus','Logo':'EYEcolumbus_logo_white.png','URL':'http://www.eyecolumbus.com/','Category':'Healthcare','Fin':'','InKind':'','Tix':'','Crew_Spon':'X','Kit_Spon':'','Black':false,'TPR':81},
+{'Name':'Fabtique','Logo':'Fabtique_logo_white.png','URL':'http://fabtique.clothing/','Category':'Retail','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':82},
+{'Name':'Fahlgren Mortine','Logo':'Fahlgren_logo_white.png','URL':'https://fahlgrenmortine.com/','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':88},
+{'Name':'Fantasy Foresight','Logo':'fantasy foresight_logo_black_2.png','URL':'https://fantasyforesight.com','Category':'Entertainment','Fin':'','InKind':'','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':true,'TPR':248},
+{'Name':'feinknopf photography','Logo':'feinknopf_logo_black_200x200.png','URL':'https://feinknopf.com/','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':true,'TPR':9999},
+{'Name':'First Responder Face-Off Foundation','Logo':'FRFO-Logo_white.png','URL':'https://www.firstresponderfaceoff.com','Category':'Entertainment','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':181},
+{'Name':'Fleet Feet Sports + Frontrunner','Logo':'fleetfeet.png','URL':'http://fleetfeetcolumbus.com/','Category':'Entertainment','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':74},
+{'Name':'Flesh To Fantasy Springfield','Logo':'Flesh2Fantasy_logo_white.png','URL':'http://www.facebook.com/f2fspringfield','Category':'Retail','Fin':'','InKind':'','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':102},
+{'Name':'Four String Brewing Company','Logo':'FourString_Logo_clover_vertWHT.png','URL':'http://www.fourstringbrewing.com','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':110},
+{'Name':'Fourth Street Bar & Grill','Logo':'4th_Street_logo_white.png','URL':'https://www.fourthstreetcolumbus.com/','Category':'Food & Bevs','Fin':'','InKind':'X','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':23},
+{'Name':'Franklinton Cycleworks','Logo':'FranklinCycleWorks_logo_white.png','URL':'https://www.franklintoncycleworks.org/','Category':'Professional Services','Fin':'','InKind':'','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':134},
+{'Name':'Friendship CrossFit','Logo':'FriendshipFitness-white.png','URL':'https://friendshipcrossfit.com/','Category':'Entertainment','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':141},
+{'Name':'Genas Restaurant ','Logo':'genas_logo_white.png','URL':'http://genasrestaurant.com/','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':167},
+{'Name':'German Village Guest House','Logo':'german-village-guest-house_logo_black-01.png','URL':'http://www.gvguesthouse.com/','Category':'Retail','Fin':'','InKind':'','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':true,'TPR':270},
+{'Name':'Glenn Avenue Soap Company','Logo':'glenn ave-soap_logo_black_200x200.png','URL':'https://www.glennavesoap.com','Category':'Retail','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':9999},
+{'Name':'Global Scarves','Logo':'GlobalScarves_logo_white.png','URL':'http://www.globalscarves.com/','Category':'Retail','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':60},
+{'Name':'Good Vibes Winery','Logo':'GoodVibes Logo_white.png','URL':'http://www.goodvibeswinery.com','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':47},
+{'Name':'Goodfellows Tonsorial Parlor','Logo':'goodfellows_logo_white.png','URL':'http://goodfellowscolumbus.com','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':227},
+{'Name':'grain + grape','Logo':'Gr2logoState_white.png','URL':'http://www.grain-grape.net','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':127},
+{'Name':'Grandview Cafe','Logo':'GrandviewCafe_logo_white.png','URL':'http://www.balboagrandview.com/','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':153},
+{'Name':'Grandview Grind Coffee House','Logo':'grandview grind_logo_white.png','URL':'https://www.facebook.com/Grandview-Grind-248915351871033/','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':228},
+{'Name':'Great Lakes Brewing Company','Logo':'great_lakes_logo_white.png','URL':'https://www.greatlakesbrewing.com','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'X','Kit_Spon':'','Black':false,'TPR':18},
+{'Name':'Grove City Jolly Pirate Donuts','Logo':'JollyPirate_logo_white.png','URL':'https://www.facebook.com/Jolly-Pirate-Donuts-108162949225972/','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':84},
+{'Name':'GSW','Logo':'GSW_logo_white.png','URL':'http://www.gsw-w.com/','Category':'Healthcare','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':111},
+{'Name':'Haven Collective','Logo':'Haven Logo Circle WHITE RGB.png','URL':'https://www.havencolumbus.com/','Category':'Professional Services','Fin':'','InKind':'X','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':55},
+{'Name':'HealthFirst Chiropractic ','Logo':'HealthFirst_logo_white.png','URL':'livehealthfirst.com','Category':'Healthcare','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':104},
+{'Name':'Hempy Water','Logo':'hempy water_logo_white.png','URL':'http://www.hempywater.com','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':211},
+{'Name':'Hendocs Pub','Logo':'hendocs_logo_white.png','URL':'https://www.yelp.com/biz/hendocs-pub-columbus','Category':'Food & Bevs','Fin':'','InKind':'X','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':169},
+{'Name':'HMB','Logo':'HMB_logo_white.png','URL':'https://www.hmbnet.com/','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':214},
+{'Name':'Hofbrauhaus Columbus ','Logo':'Hofbrauhaus_logo_white.png','URL':'https://www.hofbrauhauscolumbus.com','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':13},
+{'Name':'Holy Moses','Logo':'HolyMosesLogo.png','URL':'http://www.holymoseshair.com/','Category':'Professional Services','Fin':'$250 to $1000','InKind':'','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':56},
+{'Name':'Honest Advertising','Logo':'honestadvertising.png','URL':'','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':76},
+{'Name':'Hoof Hearted Brewery & Kitchen','Logo':'HoofHearted_logo_black-01.png','URL':'https://hoofheartedkitchen.com/','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':9999},
+{'Name':'Hoover Haus Assisted Living Center','Logo':'hoover haus_logo_black.png','URL':'http://www.hooverhaus.com','Category':'Healthcare','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':999},
+{'Name':'Hot Chicken Takeover','Logo':'HCT_logo_white.png','URL':'https://hotchickentakeover.com','Category':'Food & Bevs','Fin':'','InKind':'X','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':10},
+{'Name':'Hudson 29 Kitchen and Drink','Logo':'CameronMitchell_Hudson29_logo_white.png','URL':'https://hudson29.com/','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':38},
+{'Name':'HustleWorks','Logo':'HustleWorks_logo_black-01.png','URL':'https://hustleworks.com','Category':'Professional Services','Fin':'','InKind':'','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':true,'TPR':249},
+{'Name':'HyperMed1a','Logo':'HyperMed1a_logo_white.png','URL':'http://www.hypermed1a.com','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':230},
+{'Name':'HyperSoc1al','Logo':'HyperSoc1al_logo_white.png','URL':'https://www.hypersoc1al.com','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':231},
+{'Name':'Ice Miller','Logo':'ICE-Logo_KO-01.png','URL':'https://www.icemiller.com','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':140},
+{'Name':'Igloo Letterpress','Logo':'IglooLetterpress_logo_black-01.png','URL':'http://www.iglooletterpress.com','Category':'Retail','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':true,'TPR':250},
+{'Name':'Ill Mannered Brewing Co.','Logo':'ill_mannered_logo_white.png','URL':'http://www.illmanneredbeer.com','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':169},
+{'Name':'Improving - Columbus','Logo':'Improving_logo_white.png','URL':'http://www.improving.com/location/columbus','Category':'Professional Services','Fin':'','InKind':'','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':84},
+{'Name':'J.Bentley Hair Studio & Day Spa','Logo':'jbentley_logo_white.png','URL':'http://jbentley.com/','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':232},
+{'Name':'JEGS Automotive, Inc.','Logo':'JEGS_Black.png','URL':'http://www.jegs.com','Category':'Retail','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':true,'TPR':9},
+{'Name':'Jenis Splendid Ice Cream','Logo':'jenis_logo_white.png','URL':'https://jenis.com','Category':'Food & Bevs','Fin':'< $250','InKind':'X','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':11},
+{'Name':'Jennings Java Coffee Roasters','Logo':'jennings java_logo_white.png','URL':'https://jenningsjava.com/','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':202},
+{'Name':'Jimmy V’s Grill & Pub, Westerville','Logo':'Jimmy V logo_white-01.png','URL':'http://www.jimmyvswesterville.com','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':48},
+{'Name':'Kahiki Foods','Logo':'Kahiki_logo_white.png','URL':'http://www.kahiki.com','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':112},
+{'Name':'Kayne Law Group','Logo':'KLGlaw_logo_white.png','URL':'http://kaynelaw.com/','Category':'Professional Services','Fin':'','InKind':'','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':89},
+{'Name':'Keep It Simple Socks','Logo':'KeepItSimpleSocks_logo_white.png','URL':'http://www.keepitsimplesocks.com','Category':'Retail','Fin':'$250 to $1000','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':100},
+{'Name':'Keller Williams Greater Columbus Realty','Logo':'KellerWilliams_white.png','URL':'http://micgordon.com','Category':'Professional Services','Fin':'','InKind':'X','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':27},
+{'Name':'Kendle Team','Logo':'KendleTeam_logo_black.png','URL':'http://kendleteam.com','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':true,'TPR':251},
+{'Name':'Khan Spine Ventures','Logo':'Khan_Spine_Ventures_B&W_Logo.png','URL':'https://wexnermedical.osu.edu/find-a-doctor/safdar-khan-md-42617?utm_source=local&utm_medium=organic&utm_campaign=gmb','Category':'Professional Services','Fin':'$1000 <','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':true,'TPR':20},
+{'Name':'Kickmaster Footgolf','Logo':'KickmasterFootgolf_logo_white.png','URL':'http://www.kickmasterfootgolf.com','Category':'Entertainment','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':113},
+{'Name':'King Avenue 5','Logo':'KingAvenue5_logo_black.png','URL':'https://kingavenuefive.com','Category':'Food & Bevs','Fin':'','InKind':'X','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':true,'TPR':252},
+{'Name':'Kitties Cakes ','Logo':'KITTIES_white-01.png','URL':'http://www.kittiescakes.com','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':99},
+{'Name':'Lake Erie Shores & Islands','Logo':'lake-erie-shores_logo_black-01.png','URL':'http://www.shoresandislands.com ','Category':'Entertainment','Fin':'','InKind':'','Tix':'','Crew_Spon':'X','Kit_Spon':'','Black':true,'TPR':270},
+{'Name':'Land-Grant Brewing','Logo':'LandGrant_white.png','URL':'https://www.landgrantbrewing.com','Category':'Food & Bevs','Fin':'$250 to $1000','InKind':'X','Tix':'','Crew_Spon':'X','Kit_Spon':'','Black':false,'TPR':8},
+{'Name':'Le Meridien Columbus, The Joseph','Logo':'le-meridien_white.png','URL':'http://www.lemeridiencolumbus.com/','Category':'Retail','Fin':'','InKind':'','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':12},
+{'Name':'LIFE church','Logo':'life_church_logo_white.png','URL':'http://lifevineyardchurch.com','Category':'Other','Fin':'','InKind':'','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':170},
+{'Name':'Lineage Brewing','Logo':'LineageBrewing_logo_white.png','URL':'http://www.lineagebrew.com','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':146},
+{'Name':'Local Cantina','Logo':'local cantina_logo_white.png','URL':'http://www.localcantina.com','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':186},
+{'Name':'Locker Soccer Training','Logo':'locker soccer_logo_white.png','URL':'https://www.lockersoccertraining.com/','Category':'Entertainment','Fin':'','InKind':'','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':211},
+{'Name':'Lohcal Apparel','Logo':'lohcal-logo_white.png','URL':'https://lohcal.co/','Category':'Retail','Fin':'$250 to $1000','InKind':'X','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':77},
+{'Name':'Los Guachos Taqueria','Logo':'Los Guachos_logo_white.png','URL':'http://los-guachos.com','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':209},
+{'Name':'Luke Roth Shelter Insurance','Logo':'LukeRoth_logo_black_200x200.png','URL':'https://www.shelterinsurance.com/CA/agent/LROTH','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':9999},
+{'Name':'M at Miranova','Logo':'CameronMitchell_Miranova_logo_white.png','URL':'https://www.matmiranova.com/','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':42},
+{'Name':'Magannni Inc','Logo':'maganni_logo_black_200x200.png','URL':'https://www.magnanni.com/','Category':'Retail','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':9999},
+{'Name':'Magnetic Springs Water Company ','Logo':'MagneticSprings_logo_white.png','URL':'https://www.magneticsprings.com/','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':90},
+{'Name':'Maple Craft, LLC','Logo':'maple-craft-custom-homes_logo_black.png','URL':'http://maplecraftcustomhomes.com/','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':true,'TPR':268},
+{'Name':'Marathon Media and Signs','Logo':'MarathonMedia_logo_white.png','URL':'','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':58},
+{'Name':'Marcellas ','Logo':'CameronMitchell_Marcellas_logo_white.png','URL':'https://marcellasrestaurant.com/','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':40},
+{'Name':'Martini Modern Italian','Logo':'CameronMitchell_Martini_logo_white.png','URL':'https://www.martinimodernitalian.com/','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':41},
+{'Name':'McClellans Taekwondo Academy','Logo':'McClellansTaekwondo_logo_white.png','URL':'https://www.missmtkd.com','Category':'Entertainment','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':156},
+{'Name':'Metcalf Design & Printing Center','Logo':'MetcalfPrinting_logo_white.png','URL':'http://www.metcalfprinting.com','Category':'Professional Services','Fin':'','InKind':'X','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':157},
+{'Name':'MIddle West Spirits','Logo':'MiddleWestSpirits_logo_black-01.png','URL':'http://middlewestspirits.com','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':true,'TPR':253},
+{'Name':'Midway ','Logo':'midway_logo_black_200x200-01.png','URL':'https://www.facebook.com/MidwayOnHigh/','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':9999},
+{'Name':'Mikeys Late Night Slice','Logo':'mikeys.png','URL':'https://www.latenightslice.com/','Category':'Food & Bevs','Fin':'','InKind':'X','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':77},
+{'Name':'Mills James','Logo':'mills james_logo_white.png','URL':'http://millsjames.com','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':171},
+{'Name':'Mindstream Interactive','Logo':'MindstreamInteractive_logo_black.png','URL':'https://www.mindstreaminteractive.com/?utm_source=savethecrew&utm_medium=referral&utm_campaign=savethecrew','Category':'Professional Services','Fin':'','InKind':'','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':true,'TPR':33},
+{'Name':'Minuteman Press of Grandview Heights','Logo':'MinuteManPress_logo_white.png','URL':'http://mpGrandview.com','Category':'Professional Services','Fin':'','InKind':'X','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':147},
+{'Name':'Molly Woos Asian Bistro','Logo':'CameronMitchell_MollyWoos_logo_white.png','URL':'https://www.mollywoos.com/','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':43},
+{'Name':'Mr. Mom Pet Sitting','Logo':'mr mom_logo_white.png','URL':'http://www.mrmompetsitting.com','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':172},
+{'Name':'MSF Real Estate Capital','Logo':'msf.jpg','URL':'http://msfcap.com/','Category':'Professional Services','Fin':'$250 to $1000','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':9999},
+{'Name':'North High Brewing','Logo':'NorthHighBrewing_logo_white.png','URL':'http://www.northhighbrewing.com/','Category':'Food & Bevs','Fin':'$250 to $1000','InKind':'X','Tix':'','Crew_Spon':'X','Kit_Spon':'','Black':false,'TPR':104},
+{'Name':'Northwest Title','Logo':'NorthwestTitle_logo_white.png','URL':'http://www.nwtitle.com/','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':114},
+{'Name':'Ocean Club','Logo':'CameronMitchell_OceanClub_logo_white.png','URL':'https://www.ocean-prime.com/locations-menus/mitchells-ocean-club','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':44},
+{'Name':'Ohio is Home','Logo':'ohio is home_logo_white.png','URL':'https://ohioishome.com','Category':'Retail','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':174},
+{'Name':'Ohio Sweet Homes, LLC','Logo':'ohio sweet homes_logo_white.png','URL':'','Category':'Professional Services','Fin':'','InKind':'','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':216},
+{'Name':'Old Skool','Logo':'oldskool_logo_white.png','URL':'http://www.oldskool614.com/','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':186},
+{'Name':'Olde Towne Flowers & Gifts','Logo':'OldeTownflowersGifts_logo_white.png','URL':'http://www.otflowers.com','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':158},
+{'Name':'Olentangy Pediatric Dentistry','Logo':'olentangy_pediatric_dentistry.png','URL':'http://www.opdpowell.com','Category':'Professional Services','Fin':'','InKind':'','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':196},
+{'Name':'Ologie','Logo':'Ologie_White.png','URL':'https://ologie.com/','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':999},
+{'Name':'Olympus Cleaners','Logo':'OlympusCleaners_logo_white.png','URL':'http://olympuscleaners.com','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':115},
+{'Name':'Ondo Media','Logo':'OndoMedia_logo_black.png','URL':'http://ondomedia.com','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':true,'TPR':254},
+{'Name':'One Line Coffee','Logo':'OneLine_logo_white.png','URL':'http://www.onelinecoffee.com/','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':91},
+{'Name':'Orthopedic ONE','Logo':'orthopedic one logo_white.png','URL':'http://www.orthopedicone.com/','Category':'Healthcare','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':185},
+{'Name':'Over The Counter','Logo':'over the counter_logo_black.png','URL':'www.overthecounterofworthington.com','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':9999},
+{'Name':'Parachute Partners','Logo':'parachute partners_logo.png','URL':'http://wejumpwithyou.com/','Category':'Entertainment','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':174},
+{'Name':'Pathways Financial Credit Union','Logo':'pathways logo_white.png','URL':'https://www.pathwayscu.com/','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':190},
+{'Name':'Pecan Pennys Barbecue','Logo':'pennypecan.png','URL':'http://pecanpennys.com/','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':68},
+{'Name':'Pelotonia','Logo':'pelotonia_logo_white.png','URL':'https://www.pelotonia.org ','Category':'Other','Fin':'','InKind':'X','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':176},
+{'Name':'Piada Italian Street Food','Logo':'Piada_ISF_Two_Lines_Solid_2C_white_modi.png','URL':'https://mypiada.com/','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':21},
+{'Name':'Pigskin Brewing Company','Logo':'PigskinBrewing_logo_white.png','URL':'https://pigskinbrewingcompany.com','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':159},
+{'Name':'Pins Mechanical Company','Logo':'pins_logo_white.png','URL':'https://www.pinsbar.com/','Category':'Entertainment','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':14},
+{'Name':'Pizza Cucinova','Logo':'PizzaCucinova_logo_white.png','URL':'https://pizzacucinova.com/','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':160},
+{'Name':'Platform Beer Company','Logo':'PlatformBrewing_logo_white.png','URL':'https://platformbeer.co/','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'X','Kit_Spon':'','Black':false,'TPR':161},
+{'Name':'Polaris Massage Fix','Logo':'PolarisMassageFix_White.png','URL':'http://www.polarismassagefix.com','Category':'Professional Services','Fin':'','InKind':'','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':219},
+{'Name':'Pontones Music','Logo':'pontones music_logo_white.png','URL':'www.pontonesmusic.com','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':217},
+{'Name':'poys','Logo':'poys_logo_black_200x200-01.png','URL':'https://wearpoys.com','Category':'Retail','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':9999},
+{'Name':'Premier at Sawmill Athletic Club','Logo':'PremierAthletic_logo_black_200x200-01.png','URL':'http://www.premieratsawmill.com','Category':'Entertainment','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':9999},
+{'Name':'Pretentious Barrel House ','Logo':'pretentious_logo_white.png','URL':'https://www.pretentiousbarrelhouse.com/','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':182},
+{'Name':'Prime Social Group','Logo':'PrimeSocialGroup_logo_white.png','URL':'http://www.primesocial.com','Category':'Entertainment','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':148},
+{'Name':'PromoWest Productions','Logo':'PromoWestProductions_logo_black-01.png','URL':'http://www.promowestlive.com','Category':'Entertainment','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':true,'TPR':34},
+{'Name':'Pursuit','Logo':'Pursuit_logo_white.png','URL':'https://www.pursuityourself.com/','Category':'Retail','Fin':'$250 to $1000','InKind':'','Tix':'X','Crew_Spon':'X','Kit_Spon':'','Black':false,'TPR':57},
+{'Name':'Quantum Health','Logo':'QuantumHealth_logo_white.png','URL':'http://quantum-health.com/','Category':'Healthcare','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':17},
+{'Name':'Rader Car Company','Logo':'rader car co_logo_white.png','URL':'http://www.radercarco.com/','Category':'Retail','Fin':'','InKind':'X','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':218},
+{'Name':'Radio Trankazos','Logo':'Radio_Trankazos_logo_Black.png','URL':'http://www.facebook.com/RadioTrankazos614','Category':'Entertainment','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':9999},
+{'Name':'Rancid','Logo':'rancid stencil_black_200x200-01.png','URL':'https://rancidrancid.com/','Category':'Entertainment','Fin':'$1000 <','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':9999},
+{'Name':'RAVE','Logo':'RAVE-WHITE-Horiz-RGBHEX [Converted]-01.png','URL':'https://rave.agency/','Category':'Professional Services','Fin':'$250 to $1000','InKind':'X','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':50},
+{'Name':'RDP Foodservice','Logo':'RDP_Food_Service_logo_white.png','URL':'https://www.rdpoms.com/main/auth/login','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':150},
+{'Name':'ReadyCap Lending','Logo':'ready cap_logo_white.png','URL':'https://www.readycaplending.com/specialtyfinance','Category':'Professional Services','Fin':'','InKind':'','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':210},
+{'Name':'RecSports Now','Logo':'RecSportsNow_White.png','URL':'http://www.recsportsnow.com/','Category':'Entertainment','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':204},
+{'Name':'Red Apron Pizza Co','Logo':'red apron_logo_white.png','URL':'http://www.redapronpizzaco.com','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':233},
+{'Name':'Red Tail Design Co','Logo':'RedTail_logo_white.png','URL':'https://redtaildesign.com/','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':92},
+{'Name':'Resolute Athletic Complex','Logo':'resolute_logo_black_200x200.png','URL':'http://resoluteac.com','Category':'Entertainment','Fin':'','InKind':'X','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':true,'TPR':999},
+{'Name':'Restaurant Specialties, Inc. | RSI Construction Services','Logo':'RSI Construction_logo_black.png','URL':'http://www.rsibuilds.com','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':true,'TPR':255},
+{'Name':'Ritchie Realty Group','Logo':'ritchie realty group_logo_white.png','URL':'http://www.ritchierealtygroup.com/','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':234},
+{'Name':'Robintek','Logo':'robintek_logo_black-01.png','URL':'https://www.robintek.com','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':true,'TPR':262},
+{'Name':'Rogers Krajnak Architects, Inc.','Logo':'RogersKrajnak_logo_white.png','URL':'http://www.rogerskrajnak.com/','Category':'Professional Services','Fin':'$250 to $1000','InKind':'X','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':116},
+{'Name':'Roosters','Logo':'Roosters_white.png','URL':'https://www.roosterswings.com/corporate/','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'X','Kit_Spon':'','Black':false,'TPR':19},
+{'Name':'Root Insurance Co.','Logo':'RootInsurance_logo_black.png','URL':'https://www.joinroot.com','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':true,'TPR':264},
+{'Name':'Rourke and Blumenthal LLP','Logo':'rourke and blumenthal_logo_black_200x200-01.png','URL':'https://www.randbllp.com/','Category':'Professional Services','Fin':'$250 to $1000','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':9999},
+{'Name':'Ruby Tuesday Live','Logo':'RubyTuesday_logo_black.png','URL':'https://Rubytuesdaylive.com','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':true,'TPR':256},
+{'Name':'Safelite Autoglass','Logo':'safelite.png','URL':'https://www.safelite.com','Category':'Professional Services','Fin':'$1000 <','InKind':'','Tix':'X','Crew_Spon':'','Kit_Spon':'X','Black':false,'TPR':2},
+{'Name':'SalesFuel','Logo':'SalesFuel_logo_white.png','URL':'http://www.salesfuel.com','Category':'Professional Services','Fin':'','InKind':'','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':117},
+{'Name':'Savor Safe Food','Logo':'savor safe food_logo_white.png','URL':'https://www.savorsafefood.com','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':207},
+{'Name':'Sbarro','Logo':'Sbarro_logo_white.png','URL':'https://sbarro.com/','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':162},
+{'Name':'Schneider Downs & Co., Inc.','Logo':'schneider-downs_logo_black-01.png','URL':'https://www.schneiderdowns.com/','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':true,'TPR':267},
+{'Name':'Seventh Son Brewing','Logo':'SeventhSon_White.png','URL':'www.seventhsonbrewing.com','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':128},
+{'Name':'Sharper Impressions Painting','Logo':'sharper impressions_logo_white.png','URL':'https://www.sharperimpressionspainting.com/','Category':'Professional Services','Fin':'','InKind':'X','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':236},
+{'Name':'Shout It Out Design','Logo':'ShoutItOutDesigns_logo_white.png','URL':'https://shoutitoutdesign.com','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':118},
+{'Name':'Smokehouse Brewing Company','Logo':'smokehouse-brewing-co.png','URL':'http://Smokehousebrewing.com','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':999},
+{'Name':'Snyder Brick & Block','Logo':'Snyder_logo_white.png','URL':'http://www.snyderonline.com/','Category':'Professional Services','Fin':'','InKind':'','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':105},
+{'Name':'Soccer & Beer','Logo':'SoccerBeer_logo_white.png','URL':'https://t.co/eleESFxnFr','Category':'Entertainment','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':120},
+{'Name':'Southern Ohio Adult Soccer Association','Logo':'SOASA_logo_white.png','URL':'http://www.soasa.com','Category':'Entertainment','Fin':'','InKind':'','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':136},
+{'Name':'Spirited Wax','Logo':'SpiritedWax_logo_black-01.png','URL':'https://spiritedwax.patternbyetsy.com','Category':'Retail','Fin':'','InKind':'','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':true,'TPR':257},
+{'Name':'Staas Brewing Company','Logo':'staas brewing_logo_white.png','URL':'http://www.staasbrewing.com','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':204},
+{'Name':'Stanley Steemer Columbus','Logo':'SSI_Columbus_logo_white.png','URL':'https://www.stanleysteemer.com/','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':189},
+{'Name':'Stansbury Weaver, Ltd. ','Logo':'StansburyWeaver_logo_white.png','URL':'http://www.stansburyweaver.com/','Category':'Professional Services','Fin':'','InKind':'','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':93},
+{'Name':'Stanwood Capital Consultants','Logo':'stanwood capital consultants_logo_sq.png','URL':'https://www.stanwoodcapital.com','Category':'Professional Services','Fin':'','InKind':'','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':9999},
+{'Name':'Sticker Mule','Logo':'StickerMule_logo_white.png','URL':'https://www.stickermule.com/','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':63},
+{'Name':'Submarine House','Logo':'SubHouse_logo_white.png','URL':'https://www.facebook.com/SubHouseHilliard','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':177},
+{'Name':'Subway Development of Columbus','Logo':'Subway_logo_white.png','URL':'http://www.subway.com/en-us','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':16},
+{'Name':'Super wash Cridersville ','Logo':'super wash_logo_black_200x200-01.png','URL':'http://www.superwash.com/','Category':'Professional Services','Fin':'','InKind':'','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':999},
+{'Name':'Supporter Supply Co','Logo':'SUPPCo._logo_white.png','URL':'https://www.supportersupply.co/','Category':'Retail','Fin':'','InKind':'X','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':62},
+{'Name':'Talisman & Co.','Logo':'talisman.png','URL':'https://talismancaps.com/','Category':'Retail','Fin':'$250 to $1000','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':69},
+{'Name':'Technicare Carpet Cleaning and more...','Logo':'TecnicareCarpet_logo_white.png','URL':'https://mytechnicare.com','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':95},
+{'Name':'The Avenue Steak Tavern','Logo':'TheAvenue_logo_white.png','URL':'https://theavenuesteaktavern.com/','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':150},
+{'Name':'The Barn at Rocky Fork Creek','Logo':'CameronMitchell_TheBarn_logo_white.png','URL':'https://thebarncolumbus.com/','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':45},
+{'Name':'The Cabinet Shop','Logo':'Cabinet-Shop-_logo_white.png','URL':'http://thecabshop.com','Category':'Professional Services','Fin':'','InKind':'','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':54},
+{'Name':'The Crest Gastropub - Clintonville','Logo':'TheCrest_logo_black_200x200.png','URL':'https://www.thecrestgastropub.com/','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':9999},
+{'Name':'The Daily Growler','Logo':'dailygrowler.png','URL':'http://www.thedailygrowler.com/','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':73},
+{'Name':'The Estate at New Albany','Logo':'TheEstate_logo_white.png','URL':'http://www.theestatenewalbany.biz/?utm_source=theknot.com&utm_medium=referral&utm_campaign=theknot','Category':'Professional Services','Fin':'','InKind':'','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':86},
+{'Name':'The Exception Hair Studio','Logo':'TheExceptionHairStudio_logo_black-01.png','URL':'https://www.facebook.com/theexceptionhairstudio/','Category':'Professional Services','Fin':'$250 to $1000','InKind':'','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':true,'TPR':263},
+{'Name':'The Finer Things Event Planning','Logo':'the finer things_logo_white.png','URL':'http://thefinerthingseventplanning.com','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':235},
+{'Name':'THE FLAG LADYS FLAG STORE','Logo':'the flag lady_white.png','URL':'https://flagladyusa.com/','Category':'Retail','Fin':'$250 to $1000','InKind':'X','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':179},
+{'Name':'The Grandview Hop','Logo':'grandview hop_logo_white.png','URL':'https://grandviewhop.com/','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':187},
+{'Name':'The Guild House','Logo':'CameronMitchell_GuildHouse_logo_white.png','URL':'https://www.theguildhousecolumbus.com/','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':37},
+{'Name':'The Hessenauer Corporation','Logo':'the-hessenauer-corporation_logo_black.png','URL':'http://www.hessenauer.com','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':true,'TPR':266},
+{'Name':'The Hills Market','Logo':'hills market_logo_white.png','URL':'http://www.thehillsmarket.com','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':229},
+{'Name':'The Kit Company','Logo':'TheKitCompany_logo_white.png','URL':'http://getdatekit.com','Category':'Other','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':151},
+{'Name':'The Law Office of Brian Jones, LLC','Logo':'brian-jones_logo_black_200x200-01.png','URL':'www.tlobj.com','Category':'Professional Services','Fin':'','InKind':'','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':9999},
+{'Name':'The Market Italian Village','Logo':'TheMarket_logo_black_200x200-01.png','URL':'https://www.themarketiv.com/','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':9999},
+{'Name':'The Media Captain','Logo':'MediaCaptain_logo_white.png','URL':'https://www.themediacaptain.com/','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':135},
+{'Name':'The Naz ','Logo':'naz_logo_black_200x200.png','URL':'http://thenaz.tv/church/sports','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':true,'TPR':9999},
+{'Name':'The Olde Towne Tavern','Logo':'tavern.png','URL':'http://www.theoldetownetavern.com/','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':65},
+{'Name':'The Pearl','Logo':'CameronMitchell_ThePearl_logo_white.png','URL':'http://www.thepearlcolumbus.com/','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':46},
+{'Name':'The Perch','Logo':'ThePerch_logo_white.png','URL':'http://theperchshortnorth.com/','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':163},
+{'Name':'The Pub Polaris','Logo':'thepub.png','URL':'http://experiencethepub.com/polaris/','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':79},
+{'Name':'The Roosevelt Coffeehouse','Logo':'The RooseveltCoffeehouse_logo_black-01.png','URL':'https://www.rooseveltcoffee.org','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':true,'TPR':258},
+{'Name':'The Tiber Group','Logo':'TiberGroup_logo_black-01.png','URL':'https://thetibergroup.com/','Category':'Professional Services','Fin':'$250 to $1000','InKind':'','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':9999},
+{'Name':'The Walrus Kitchen & Public House','Logo':'walrus.png','URL':'http://www.thewalruscolumbus.com/','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':61},
+{'Name':'The Wonder Jam','Logo':'the wonder jam_logo_white.png','URL':'https://thewonderjam.com/','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':224},
+{'Name':'Three Sheets','Logo':'ThreeSheets_logo_white.png','URL':'https://www.facebook.com/threesheetsbrewerydistrict/','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':97},
+{'Name':'Threes Above High','Logo':'ThreesAboveHigh_logo_black-01.png','URL':'https://threesabovehigh.com','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':true,'TPR':259},
+{'Name':'Title Boxing','Logo':'TITLEboxing_logo_white.png','URL':'https://titleboxingclub.com','Category':'Entertainment','Fin':'','InKind':'','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':28},
+{'Name':'Tobacco International','Logo':'TobaccoInternational_logo_black_200x200-01.png','URL':'https://www.facebook.com/Tobacco-International-775079102526768/','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':9999},
+{'Name':'Tom Scholes','Logo':'TomScholes_logo_black_200x200.png','URL':'https://wakelet.com/@TomScholes316','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':true,'TPR':999},
+{'Name':'Tonic Studios','Logo':'TonicStudios_logo_white.png','URL':'http://www.tonicstudios614.com/','Category':'Retail','Fin':'','InKind':'X','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':49},
+{'Name':'TRC','Logo':'TRC_logo_white.png','URL':'https://www.trcsolutions.com/','Category':'Professional Services','Fin':'','InKind':'','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':177},
+{'Name':'Triple Force CrossFit','Logo':'TFCF_logo_white.png','URL':'http://www.tripleforcecrossfit.com','Category':'Entertainment','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':97},
+{'Name':'TRISM','Logo':'TRISM_logo_black_200x200-01.png','URL':'https://www.trismcbus.com/','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':9999},
+{'Name':'Trivia614','Logo':'Trivia614_logo_white.png','URL':'http://www.facebook.com/trivia614','Category':'Entertainment','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':120},
+{'Name':'True REST Float Spa','Logo':'TrueRest_Columbus_logo_black-01.png','URL':'http://www.truerest.com/locations','Category':'Retail','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':9999},
+{'Name':'Upsourced Accounting','Logo':'upsourced-accounting_logo_black.png','URL':'https://www.upsourcedaccounting.com/','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':true,'TPR':265},
+{'Name':'Uptowne Flowers','Logo':'UptownFlowers_White.png','URL':'www.uptowneflowers.com','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':81},
+{'Name':'V.A.T., Inc.','Logo':'VAT_Inc_logo_black.png','URL':'http://vatinc.com/','Category':'Professional Services','Fin':'','InKind':'X','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':9999},
+{'Name':'Velosio (Formerly Socius)','Logo':'socius_logo_white.png','URL':'https://www.velosio.com/','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':64},
+{'Name':'Versa','Logo':'Versa_logo_white.png','URL':'http://versa.works/','Category':'Professional Services','Fin':'','InKind':'','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':121},
+{'Name':'Wagenbrenner Development','Logo':'wagenbrenner_logo_white.png','URL':'http://wagmgmt.com/','Category':'Professional Services','Fin':'','InKind':'','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':183},
+{'Name':'Warped Wing Brewing Co','Logo':'WarpedWing_logo_white.png','URL':'http://www.warpedwing.com','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':123},
+{'Name':'WCBE-FM','Logo':'WCBE_logo_white.png','URL':'http://www.wcbe.org/','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':152},
+{'Name':'WD Partners','Logo':'WD Partners_logo_black-01.png','URL':'http://www.wdpartners.com/','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':true,'TPR':32},
+{'Name':'Weilands Market','Logo':'weilands_logo_white.png','URL':'http://www.weilandsmarket.com/','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':178},
+{'Name':'Welding Professional Services, Inc.','Logo':'WPS_logo_bw.png','URL':'https://www.wps-ndt.com/','Category':'Construction/Manufacturing','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':9999},
+{'Name':'White Castle','Logo':'WhiteCastle_logo_white.png','URL':'https://www.whitecastle.com','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':4},
+{'Name':'Wolfs Ridge Brewing','Logo':'WolfsRidge_logo_white.png','URL':'http://www.wolfsridgebrewing.com','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':123},
+{'Name':'Woodlands Tavern','Logo':'WoodlandsTavern_logo_white.png','URL':'http://woodlandstavern.com/','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':94},
+{'Name':'Woodys Wing House','Logo':'woodys-wing-house.png','URL':'http://www.woodyswinghouse.com','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':999},
+{'Name':'WSA Studio','Logo':'WSA Studio_logo_black.png','URL':'http://www.wsastudio.com','Category':'Professional Services','Fin':'','InKind':'','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':true,'TPR':260},
+{'Name':'Xcelerate Media','Logo':'xcelerate media_logo_white.png','URL':'http://www.xceleratemedia.com/website/index.html','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':196},
+{'Name':'Yats Cajun Creole','Logo':'yats.png','URL':'http://yatscajuncreole.com/wp/columbusoh/','Category':'Food & Bevs','Fin':'','InKind':'X','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':80},
+{'Name':'Yellowood Design Studio','Logo':'Yellowood_logo_white.png','URL':'http://www.yellowoodesign.com','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':98},
+{'Name':'Zacatecas Restaurant','Logo':'zacatecas_restaurant_black_200x200.png','URL':'','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':true,'TPR':999},
+{'Name':'Zappenin','Logo':'Zappenin_logo_white.png','URL':'https://www.zappenin.com','Category':'Professional Services','Fin':'','InKind':'','Tix':'X','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':124},
+{'Name':'Zest Juice Co. ','Logo':'zest_logo_black.png','URL':'https://www.zestjuiceco.com/','Category':'Food & Bevs','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':9999},
+{'Name':'Zipline Logistics','Logo':'ZiplineLogistics_logo_black-01.png','URL':'https://ziplinelogistics.com/','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':true,'TPR':261},
+{'Name':'ZoCo Design','Logo':'zoco_logo_white.png','URL':'https://www.zocodesign.com','Category':'Professional Services','Fin':'','InKind':'','Tix':'','Crew_Spon':'','Kit_Spon':'','Black':false,'TPR':217}
+				];
+				
+				//var cats = [];
+				var cat='';
+				
+				// filter by category
+				function catAllies(c){
+					
+					if(c.toLowerCase()==cat) cat='';
+					else cat = c.toLowerCase();
+					
+					$('#category-label').html('Category' + (cat.length>0?': '+c:''));
+					
+					build();
+				}
+				
+				// sort by rank (or anything else)
+				function sortAllies(s,d){ 
+					
+					// if clicked again, change sort direction
+					if(s.toLowerCase()==sort.s.toLowerCase() && d.toLowerCase()==sort.d.toLowerCase() && sort.d.toLowerCase()=='asc') d='desc';
+					
+					sort.s = s; sort.d = d;
+					
+					// sort
+					if($.isNumeric(allies[0][s])){ // numeric
+						if(d=='desc'){ 
+							allies.sort(function(b,a) { return a[s] - b[s];});
+						}else{ 
+							allies.sort(function(a,b) { return a[s] - b[s];});
+						}
+					}else{ // character
+						if(d=='desc'){
+							allies.sort(function(b,a) {
+								var x = a.Name.toLowerCase();
+								var y = b.Name.toLowerCase();
+								return x < y ? -1 : x > y ? 1 : 0;
+							});
+						}else{
+							allies.sort(function(a,b) {
+								var x = a.Name.toLowerCase();
+								var y = b.Name.toLowerCase();
+								return x < y ? -1 : x > y ? 1 : 0;
+							});
+						}
+					}
+					
+					build();
+				}
+				
+				function build(){
+					
+					var sponsors = ['compton construction','safelite autoglass'];
+					
+					$('div#icon-grid').html('');
+					for(row in allies){
+						
+						var pass = true;
+						if(search.length>0){
+							pass = false;
+							var txt = search.split(/[ ,.]+/);
+							for(tx in txt){
+								var re = new RegExp(txt[tx],"gi");
+								var name = allies[row].Name.replace(/[^a-zA-Z0-9 ]/g, "");
+								if(name.match(re)){
+									pass =true;
+									console.log(allies[row].Name);
+								}
+							}
+							//txt = allies[row].Name.replace(/[^a-zA-Z ]/g, "").split(/[ ,.]+/);
+							//console.log(txt);
+							//for(tx in txt){
+							//	re = new RegExp(txt[tx],"gi");
+							//	if(search.match(re)) pass = true;
+							//}
+						}
+						
+						if(pass && (cat=='' || cat.toLowerCase()==allies[row].Category.toLowerCase())){ 
+							var temp;
+							temp = "<a class='ally-card box-shadow' target='_new' href='"+allies[row].URL+"'>";
+							temp += "<div class='ally-card-img-area fc'>";
+							temp += (sponsors.indexOf(allies[row].Name.toLowerCase())==0?"<img class='ally-ribbon' src='images/allies/ui/Biz Allies_Main Sponsor Ribbon.svg'>":"");
+							temp += (sponsors.indexOf(allies[row].Name.toLowerCase())==1?"<img class='ally-ribbon' src='images/allies/ui/Biz Allies_Secondary Sponsor Ribbon.svg'>":"");
+							temp += "<img class='ally-card-img "+(allies[row].Black?'':'')+"' src='images/allies_optimized/"+allies[row].Logo+"'>";
+							temp += "</div>";
+							temp += "<div class='ally-accolades-area fsa'>";
+							//temp += "<div class='ally-accolade'>";
+							//temp += "<img class='ally-accolade-img' src='https://www.shareicon.net/download/2015/11/26/678200_award_512x512.png'>";
+							//temp += "</div>";
+							temp += "<div class='ally-accolade'>";
+							temp += "<img class='ally-accolade-img' src='images/allies/ui/Biz Allies_In Kind "+(allies[row].InKind.length>0?'Badge':'Placeholder')+".svg'>";
+							temp += "</div>";
+							temp += "<div class='ally-accolade'>";
+							if(allies[row].Fin.toLowerCase()=='') temp += "<img class='ally-accolade-img' src='images/allies/ui/Biz Allies_Monetary Lvl 1 Placeholder.svg'>";
+							if(allies[row].Fin.toLowerCase()=='< $250') temp += "<img class='ally-accolade-img' src='images/allies/ui/Biz Allies_Monetary Lvl 1 Badge.svg'>";
+							if(allies[row].Fin.toLowerCase()=='$250 to $1000') temp += "<img class='ally-accolade-img' src='images/allies/ui/Biz Allies_Monetary Lvl 2 Badge.svg'>";
+							if(allies[row].Fin.toLowerCase()=='$1000 <') temp += "<img class='ally-accolade-img' src='images/allies/ui/Biz Allies_Monetary Lvl 3 Badge.svg'>";
+							temp += "</div>";
+							temp += "<div class='ally-accolade'>";
+							if(allies[row].Tix.toLowerCase()=='') temp += "<img class='ally-accolade-img' src='images/allies/ui/Biz Allies_Ticket Pledge Placeholder.svg'>";
+							if(allies[row].Tix.toLowerCase()=='x') temp += "<img class='ally-accolade-img' src='images/allies/ui/Biz Allies_Ticket Pledge Badge.svg'>";
+							temp += "</div>";
+							temp += "</div>";
+							temp += "</a>";
+							
+							//temp = "<a class='ally-card' target='_new' href='"+allies[row].URL+"'>";
+							//temp += "<div class='ally-card-img-area fc'>";
+							//temp += "<img class='ally-card-img "+(allies[row].Black?'':'invert-color')+"' src='images/allies/"+allies[row].Logo+"'>";
+							//temp += "</div>";
+							//temp += "</a>";
+							
+							$('div#icon-grid').append(temp);
+						}
+					}
+				}
+				
+				var sort = {'s':'','d':''}; var search = '',waiting;
+				$(document).ready(function(){
+					$('#search-text').keyup(function(){
+						if(waiting) clearTimeout(waiting);
+						waiting = setTimeout(function(){
+							search = $('#search-text').val();
+							build();
+						},500);
+					});
+					sortAllies('TPR','asc');
+				}).on('click','.black-dropdown-area',function(){
+					$(this).children('.black-dropdown-list').slideToggle('fast');
+				}).on('mouseenter','.ally-card',function(){
+					$(this).animate({
+						marginTop: '-=5px', marginBottom: '+=5px'
+					},'fast').removeClass('box-shadow').addClass('box-shadow-deep');
+				}).on('mouseleave','.ally-card',function(){
+					$(this).animate({
+						marginTop: '+=5px', marginBottom: '-=5px'
+					},'fast').removeClass('box-shadow-deep').addClass('box-shadow');
+				});
+			</script>
+			
+			<div class='container-wide'>
+				<div id='icon-grid'></div>
+			</div>
+			
+		</div>
+		
+		<footer class='nFooter fc box-shadow-up'>
+			<div class='container fsb'>
+				
+				<div class='footer-col' style='order:2;-webkit-order:2;'>
+					<a class='footer-col-title'>Pages</a>
+					<a href='allies.html' class='footer-col-item'>Allies</a>
+					<a href='map.html' class='footer-col-item'>Ally Map</a>
+					<a href='#' class='footer-col-item'>Blog</a>
+					<a href='index.html' class='footer-col-item'>Home</a>
+					<a href='kit.html' class='footer-col-item'>Kit</a>
+					<a href='organizers.html' class='footer-col-item'>Organizers</a>
+					<a href='privacy.html' class='footer-col-item'>Privacy</a>
+					<a href='stadium.html' class='footer-col-item'>Stadium</a>
+					<a href='groups.html' class='footer-col-item'>Supporter Groups</a>
+					
+				</div>
+			
+				<div class='footer-logo-area'>
+					<img class='footer-logo' src='images/logos_tm/stc-secondary-badge-tm.png'>
+					<!--<div class='signature euro'>Built by <a href='https://twitter.com/tomuky' target='_new'>Tom</a> for Columbus</div>-->
+				</div>
+				
+				<div class='footer-col' style='order:4;-webkit-order:4;'>
+					<a class='footer-col-title'>Contact</a>
+					<a href='mailto:team@savethecrew.com' class='footer-col-item'>Team@SaveTheCrew.com</a>
+					<a href='mailto:business@savethecrew.com' class='footer-col-item'>Business@SaveTheCrew.com</a>
+					<a href='mailto:media@savethecrew.com' class='footer-col-item'>Media@SaveTheCrew.com</a>
+					<a href='https://twitter.com/save_the_crew' target='_blank' class='footer-col-item'>Twitter.com/save_the_crew</a>
+					<a href='https://facebook.com/savethecrew' target='_blank' class='footer-col-item'>Facebook.com/SaveTheCrew</a>
+					<a href='https://www.instagram.com/savethecrew/' target='_blank' class='footer-col-item'>Instagram.com/SaveTheCrew</a>
+				</div>
+				
+			</div>
+		</footer>
+		
+	</body>
+</html>
