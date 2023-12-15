@@ -1,0 +1,321 @@
+<html>
+	<head>
+		<title>STC - The Kit</title>
+		
+    <meta property="og:title"           content="Save The Crew - The Community Kit" />
+    <meta property="og:description"     content="We are launching The Community Kit to represent the best of supporter engagement, passion, and culture." />
+		<meta property="og:url"             content="https://savethecrew.com/kit" />
+		<meta property="og:image"           content="https://savethecrew.com/images/kit/fb-image-kit6.png" />
+		<meta property="og:image:width"			content="891" />
+    <meta property="og:image:height"		content="450" />
+    <meta name="twitter:title" 					content="Save The Crew - The Community Kit">
+    <meta name="twitter:description" 		content="History, culture, and tradition..." />
+		<meta name="twitter:card" 					content="summary">
+    <meta name="twitter:image" 					content="https://savethecrew.com/images/kit/twitter-kit2.png" />
+		
+    <link rel="stylesheet" href="css/white_v1.4.1.css" />
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/> 
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="images/favicons/manifest.json">
+    <link rel="mask-icon" href="images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="images/favicons/favicon.ico">
+    <meta name="msapplication-config" content="/images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700|PT+Sans" rel="stylesheet">
+		
+	</head>
+	<body>
+		
+		 
+		
+		<script> var headerChange;
+    $(document).on('click','.toggleMenu',function(){
+			$('nav').animate({width:'toggle'},'fast');
+		}).ready(function(){
+
+			window.onscroll = function(){headerChange()}; var scrolled=false;
+
+			headerChange = function (){
+				if(document.body.scrollTop > $('header').height() && $(window).width()>900 && !scrolled){
+					scrolled=true;
+					$('.nHeader').animate({'height':60},'fast');
+					$('.top').animate({'height':60},'fast');
+					$('.logo-primary').animate({'height':40,'margin':10},'fast');
+					$('.logo-words').animate({'height':20,'margin':20},'fast');
+					$('.hamburger').animate({'height':20,'padding':20},'fast');
+				}else if(document.body.scrollTop < $('header').height() && $(window).width()>900 && scrolled){
+					scrolled=false;
+					$('.nHeader').animate({'height':100},'fast');
+					$('.top').animate({'height':100},'fast');
+					$('.logo-primary').animate({'height':80,'margin':10},'fast');
+					$('.logo-words').animate({'height':40,'margin':30},'fast');
+					$('.hamburger').animate({'height':36,'padding-top':32,'padding-right':20,'padding-bottom':32,'padding-left':20},'fast');
+				}
+			}
+		});</script>
+		
+		<nav class='sider box-shadow-left'>
+			<a class='toggleMenu'>X</a>
+			<a href='index.html'>Home</a>
+			<a href='stadium.html'>Stadium</a>
+			<a href='groups.html'>Supporter Groups</a>
+			<a href='kit.html'>Kit</a>
+			<a href='allies.html'>Allies</a>
+			<a href='map.html'>Ally Map</a>
+			
+			<a href='organizers.html'>Organizers</a>
+		</nav>
+		
+		<header class='nHeader fc box-shadow-down'>
+			<div class='container-wide'>
+				<div class='top fsb'>
+					<a href='index.html' class='desk'><img src='images/logos_tm/stc_primary_logo_tm.png' class='logo-primary'></a>
+					<a href='index.html'><img src='images/logos_tm/stc_words_tm.png' class='logo-words'></a>
+					<a><img src='images/ui/hamburger.png' class='hamburger toggleMenu'></a>
+				</div>
+			</div>
+		</header>
+		
+		<div class='header-filler'></div>
+		
+		<script>
+			/* page specific js */
+			$(document).ready(function(){
+				var ratio = (380/290);
+				var cardWidth = $('.with-image').width();
+				$('.with-image').height(cardWidth/ratio);
+				$(window).resize(function(){
+					headerChange();
+					var cardWidth = $('.with-image').width();
+					$('.with-image').height(cardWidth/ratio);
+				});
+			});
+		</script>
+		
+		<div class='area fc'>
+			
+			<div class='container center-images top-image-margin'>
+				<img class='title' src='images/kit/title-graphic.png'>
+				<img class='wide' src='images/kit/Hero-Image.png' style="margin-top:20px;">
+			</div>
+			
+			<div class='container-full jersey-background jersey-background-top'>
+				<div class='shop-now box-shadow'>
+<!-- 					<img src='images/kit/Shop-Now.png'> -->
+				</div>
+			</div>
+			
+			<div class='container-full' style="background-color:black;height:10px;"></div>
+			<div class='container-full closer-look'>Take a closer look...</div>
+			
+		</div>
+		<div class='area-kit fc'>
+			
+			<div class='container fc' style='margin-top:40px;'>
+				<div class='text-full'>
+					Save The Crew believes that together, as a community, Columbus owns its soccer history, culture, and tradition. 
+					We are launching The Community Kit to represent the best of supporter engagement, passion, and culture. 
+					The jersey is meant to be OUR say, OUR reflection of how soccer is woven into the threads of Columbus' fabric.
+				</div>
+				<div class='text-full' style="font-style:italic;font-weight:bold;font-size:16px; margin-top:8px;">
+					The Community Kit is designed By Columbus supporters, FOR Columbus supporters.
+				</div>
+			</div>
+			
+		</div>
+		<div class='area-kit fc'>
+			
+			<div class='container center-images' style='margin-top:30px;'>
+				<img class='wide desktop-only' src='images/kit/Intro-Image.png'>
+				<img class='wide mobile-only' src='images/kit/Intro-Image-Mobile.png'>
+				<div class='half-text'>
+					The design utilizes a traditional hoop stripe pattern, which is one of the oldest uniform patterns in the sport's history. 
+					This choice is meant to reflect the long history of soccer being played in central Ohio, before any leagues were established in the area. 
+					It is also meant to function as a visual device when seen en masse on TV cameras.
+					With our black and yellow colors, no pattern will call more attention to our cause, our passion, and our community
+					like a stadium full of black and yellow hoop jerseys.
+				</div>
+			</div>
+			
+		</div>
+		<div class='area-kit fc'>
+			
+			<div class='container fc' style="margin-top:30px;">
+				<div class='half-box with-image' style='background-image:url("images/kit/STC-Crest.png")'></div>
+				<div class='half-box'>
+					<div class='half-box-content'>
+						<div class='half-box-title left-justify'>THE CREST</div>
+						<div class='half-box-text left-justify'>
+							The main Save The Crew logo. Columbus' skyline. An arch. A familiar shield with the year that Columbus entered top flight soccer as the league's first team.
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<div class='area-kit fc'>
+			
+			<div class='container fc' style="margin-top:10px;">
+				<div class='half-box'>
+					<div class='half-box-content'>
+						<div class='half-box-title right-justify'>THE RIGHT SLEEVE</div>
+						<div class='half-box-text right-justify'>
+							The Save The Crew hashtag logo. The mark of our movement and the symbol that spreads it globally online.
+						</div>
+					</div>
+				</div>
+				<div class='half-box with-image' style='background-image:url("images/kit/Hashtag-Badge.png")'></div>
+			</div>
+			
+		</div>
+		<div class='area-kit fc'>
+			
+			<div class='container fc' style="margin-top:10px;">
+				<div class='half-box with-image' style='background-image:url("images/kit/Jock-Tag.png")'></div>
+				<div class='half-box'>
+					<div class='half-box-content'>
+						<div class='half-box-title left-justify'>THE JOCK TAG</div>
+						<div class='half-box-text left-justify'>
+							Designates that this design was created by supporters, for Columbus supporters near and far.
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<div class='area-kit fc'>
+			
+			<div class='container-full jersey-background jersey-background-rest' >
+				<div class='shop-now box-shadow'>
+<!-- 					<img src='images/kit/Shop-Now.png'> -->
+				</div>
+			</div>
+			
+		</div>
+		<div class='area-kit fc'>
+			
+			<div class='container fc' style="margin-top:10px;">
+				<div class='half-box'>
+					<div class='half-box-content'>
+						<div class='half-box-title right-justify'>THE NECKLINE</div>
+						<div class='half-box-text right-justify'>
+							A call to action, taken from the giant Save The Crew tifo project that is now recognized around the world. A reminder of Columbus’ rich soccer history, which paved the way for all current top-flight soccer.
+						</div>
+					</div>
+				</div>
+				<div class='half-box with-image' style='background-image:url("images/kit/Neckline.png")'></div>
+			</div>
+			
+		</div>
+		<div class='area-kit fc'>
+			
+			<div class='container fc' style="margin-top:10px;">
+				<div class='half-box with-image' style='background-image:url("images/kit/Main-Sponsor-Logo.png")'></div>
+				<div class='half-box'>
+					<div class='half-box-content'>
+						<div class='half-box-title left-justify'>THE MAIN SPONSOR</div>
+						<div class='half-box-text left-justify'>
+							Compton Construction, a growing central Ohio company, with a founder that also helped found an original supporter group.
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<div class='area-kit fc'>
+			
+			<div class='container fc' style="margin-top:10px;margin-bottom:30px;">
+				<div class='half-box'>
+					<div class='half-box-content'>
+						<div class='half-box-title right-justify'>THE SLEEVE SPONSOR</div>
+						<div class='half-box-text right-justify'>
+							Safelite AutoGlass. The nation’s largest provider of vehicle glass repair and replacement services, which is proud to call Columbus home.
+						</div>
+					</div>
+				</div>
+				<div class='half-box with-image' style='background-image:url("images/kit/Secondary-Sponsor-Badge.png")'></div>
+			</div>
+			
+		</div>
+		<div class='area-kit fc'>
+			
+			<div class='container-full closer-look euro'></div>
+			<div class='container-full' style="background-color:black;height:10px;"></div>
+			
+		</div>
+		<div class='area-kit fc'>
+			
+			<div class='container center-images'>
+				<img class='wide' src='images/kit/Community-Collage.png'>
+			</div>
+			
+		</div>
+		<div class='area-kit fc'>
+			<style> @media screen and (min-width:0px) and (max-width:840px){ iframe{ width: 100% !Important; height: 200px !Important;} }</style>
+			<iframe width="800" height="450" src="https://www.youtube.com/embed/Gb5adOxYdV0?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			
+			
+		</div>
+		<div class='area-kit fc'>
+			
+			<!--<div class='container fc' style='margin-top:40px;'>
+				<div class='text-full'>The first round of orders for The Community Kit will ship in mid-March.</div>
+				<div class='text-full' style="font-style:italic;font-weight:bold;font-size:16px; margin-top:8px;">Order your piece of history today!</div>
+			</div>-->
+			
+			
+		</div>
+		<div class='area-kit fc'>
+			
+			<div class='container-full jersey-background jersey-background-rest' >
+				<div class='shop-now box-shadow'>
+<!-- 					<img src='images/kit/Shop-Now.png'> -->
+				</div>
+			</div>
+			
+		</div>
+		
+		<footer class='nFooter fc box-shadow-up'>
+			<div class='container fsb'>
+				
+				<div class='footer-col' style='order:2;-webkit-order:2;'>
+					<a class='footer-col-title'>Pages</a>
+					<a href='allies.html' class='footer-col-item'>Allies</a>
+					<a href='map.html' class='footer-col-item'>Ally Map</a>
+					<a href='#' class='footer-col-item'>Blog</a>
+					<a href='index.html' class='footer-col-item'>Home</a>
+					<a href='kit.html' class='footer-col-item'>Kit</a>
+					<a href='organizers.html' class='footer-col-item'>Organizers</a>
+					<a href='privacy.html' class='footer-col-item'>Privacy</a>
+					<a href='stadium.html' class='footer-col-item'>Stadium</a>
+					<a href='groups.html' class='footer-col-item'>Supporter Groups</a>
+					
+				</div>
+			
+				<div class='footer-logo-area'>
+					<img class='footer-logo' src='images/logos_tm/stc-secondary-badge-tm.png'>
+					<!--<div class='signature euro'>Built by <a href='https://twitter.com/tomuky' target='_new'>Tom</a> for Columbus</div>-->
+				</div>
+				
+				<div class='footer-col' style='order:4;-webkit-order:4;'>
+					<a class='footer-col-title'>Contact</a>
+					<a href='mailto:team@savethecrew.com' class='footer-col-item'>Team@SaveTheCrew.com</a>
+					<a href='mailto:business@savethecrew.com' class='footer-col-item'>Business@SaveTheCrew.com</a>
+					<a href='mailto:media@savethecrew.com' class='footer-col-item'>Media@SaveTheCrew.com</a>
+					<a href='https://twitter.com/save_the_crew' target='_blank' class='footer-col-item'>Twitter.com/save_the_crew</a>
+					<a href='https://facebook.com/savethecrew' target='_blank' class='footer-col-item'>Facebook.com/SaveTheCrew</a>
+					<a href='https://www.instagram.com/savethecrew/' target='_blank' class='footer-col-item'>Instagram.com/SaveTheCrew</a>
+				</div>
+				
+			</div>
+		</footer>
+		
+	</body>
+</html>

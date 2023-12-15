@@ -1,0 +1,321 @@
+.stadiumfullwidth{
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 800px;
+  background: url('https://savethecrew.com/stadium/images/Render View 2 - Northwest Corner Aerial.png') no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin: -30px 0 0 0;
+  z-index: 4;
+}
+.stadiumfullwidth-dark{
+  position: relative;
+  width: 100%;
+  height: 800px;
+  background: url('https://savethecrew.com/stadium/images/Render View 3 - Northwest Corner Aerial Night.png') no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin: -30px 0 0 0;
+  z-index: 3;
+}
+@media screen and (min-width:501px) and (max-width:900px){
+  .stadiumfullwidth{
+    height: 50%;
+  }
+  .stadiumfullwidth-dark{
+    height: 50%;
+  }
+}
+@media screen and (min-width:0px) and (max-width:500px){
+  .stadiumfullwidth{
+    height: 330px;
+    background: url('https://savethecrew.com/stadium/images/View-1-Day-Mobile.png') no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  .stadiumfullwidth-dark{
+    height: 330px;
+    background: url('https://savethecrew.com/stadium/images/View-1-Night-Mobile.png') no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
+
+.fade{
+  position: relative;
+  z-index: 5;
+  float: left;
+  width: 100%;
+  top: -123px;
+  height: 100px;
+  background-image: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,1));
+}
+.fulltitle{
+  font-size: 24px;
+  float: left;
+  width: 700px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.fulltext{
+  float: left;
+  width: 700px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.full-container{
+  width: 700px;
+}
+@media screen and (min-width:0px) and (max-width:700px){
+  .full-container{
+    width: auto;
+  }
+}
+.fc-col{
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  align-items: center;
+  -webkit-align-items: center;
+}
+
+.inlist ul{
+  padding: 10px 50px;
+  margin: 0;
+}
+.text-align-left{
+  text-align: left;
+}
+.text-align-center{
+  text-align: center;
+}
+@media screen and (min-width:0px) and (max-width:750px){
+  .fulltext{ width: 90%; }
+  .fulltitle{ width: 90%; }
+  .inlist ul{ padding: 10px 30px; }
+}
+
+.g-left{
+  width: 600px;
+}
+.g-left img.fill{ width: 100%; }
+.g-right{
+  width: 300px;
+  height: 282px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.thirdtitle{
+  padding: 5%;
+  width: 90%;
+  font-size: 24px;
+}
+.thirdtext{
+  padding: 0 5% 5% 5%;
+  width: 90%;
+}
+@media screen and (min-width:0px) and (max-width:900px){
+  .g-right{ width: 90%; height: auto; }
+  .thirdtitle{ padding: 20px 0 0 0; margin-bottom: 20px;}
+  .thirdtext{ padding: 0 0 2% 0; }
+}
+
+.groundfullwidth{
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 400px;
+  background: url('https://savethecrew.com/stadium/images/Render View 8 - North End to Southeast Corner With People.png') no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  z-index: 4;
+}
+.groundfullwidth-dark{
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background: url('https://savethecrew.com/stadium/images/Render View 9 - North End to Southeast Corner Night.png') no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  z-index: 3;
+}
+@media screen and (min-width:501px) and (max-width:900px){
+  .groundfullwidth{
+    height: 30%;
+  }
+  .groundfullwidth-dark{
+    height: 30%;
+  }
+}
+@media screen and (min-width:0px) and (max-width:500px){
+  .groundfullwidth{
+    height: 200px;
+    background: url('https://savethecrew.com/stadium/images/View-3-Day-Mobile.png') no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  .groundfullwidth-dark{
+    height: 200px;
+    background: url('https://savethecrew.com/stadium/images/View-3-Night-Mobile.png') no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+ }
+}
+
+.full-divider-img{
+  float: left;
+  width: 100%;
+  height: 10px;
+  background: url('https://savethecrew.com/stadium/images/yellow-divider.png');
+  background-repeat: repeat-x;
+}
+
+.h-left{
+  width: 400px;
+  height: 419px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+img.fill{ width: 100%; }
+img.fill-mobile{ display: none; }
+@media screen and (min-width:0px) and (max-width:900px){
+  img.fill-mobile{ width: 100%; display: block; }
+  img.fill{ display: none; }
+}
+
+.h-right{
+  width: 500px;
+}
+.halftitle{
+  padding: 5%;
+  width: 90%;
+  font-size: 24px;
+}
+.halftext{
+  padding: 0 5% 5% 5%;
+  width: 90%;
+}
+@media screen and (min-width:0px) and (max-width:900px){
+  .h-left{ width: 90%; height: auto; }
+  .halftitle{ padding: 20px 0 0 0; margin-bottom: 20px;}
+  .halftext{ padding: 0 0 2% 0; }
+}
+
+.seatfullwidth{
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 500px;
+  background: url('https://savethecrew.com/stadium/images/Render View 6 - Center Field Broadcast Wide Angle.png') no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+@media screen and (min-width:501px) and (max-width:900px){
+  .seatfullwidth{
+    height: 30%;
+  }
+}
+@media screen and (min-width:0px) and (max-width:500px){
+  .seatfullwidth{
+    height: 200px;
+    background: url('https://savethecrew.com/stadium/images/View-5-Mobile.png') no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
+
+.cornerfullwidth{
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 500px;
+  background: url('https://savethecrew.com/stadium/images/Render View 5 - Southeast Plaza to Northwest Corner.png') no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+@media screen and (min-width:501px) and (max-width:900px){
+  .cornerfullwidth{
+    height: 30%;
+  }
+}
+@media screen and (min-width:0px) and (max-width:500px){
+  .cornerfullwidth{
+    height: 200px;
+    background: url('https://savethecrew.com/stadium/images/View-6-Mobile.png') no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
+
+.f-half{
+  width: 400px;
+  float: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.f-half-divider{
+  width: 2px;
+  height: 400px;
+  background-color: rgba(0,0,0,.2);
+  float: left;
+}
+@media screen and (min-width:601px) and (max-width:800px){
+  .f-half{
+    width: 48%;
+  }
+}
+@media screen and (min-width:0px) and (max-width:600px){
+  .f-half-divider{
+    width: 100%;
+    height: 1px;
+    margin: 40px 0 20px 0;
+  }
+}
+
+.list ul{ 
+  padding: 0; margin: 0;
+}
+.list ul.h{
+  font-weight: bold;
+  font-size: 16px;
+}
+.list ul.i{
+  margin-left: 20px;
+}
+
+.loading-full-width{
+  position: relative;
+  float: left; z-index: 999;
+  width: 100%; height: 100px;
+}
+.loading-full-width img{
+  width: 50px;
+  height: 50px;
+}
